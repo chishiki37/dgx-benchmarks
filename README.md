@@ -12,11 +12,14 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 
 4. **[SuperDeepSeek vs Ablit](04-superdeepseek-vs-ablit-comparison.md)** — Two abliterated DeepSeek V4 Flash checkpoints, head-to-head on identical 2-node hardware. SuperDeepSeek-MQ wins on speed (+37% single-stream) and matches ablit at 96% HumanEval. Includes the endpoint-mismatch investigation that initially looked like a quality regression.
 
+5. **[DSpark-Optimized k=3 Comparison](05-dspark-optimized-k3-comparison.md)** — Third abliterated checkpoint (`drowzeys/keys-...-Abliterated-32-32`) with DSpark k=3 speculative decoding. Fastest recipe yet: 56.4 tok/s single-stream (2.1× ablit), 100% GSM8K, 94% HumanEval. Includes per-position spec-decode acceptance analysis and HumanEval failure diff across all three checkpoints.
+
 ## Key Results
 
 | Config | Framework | Decode (tok/s) | GSM8K | HumanEval |
 |--------|-----------|:--------------:|:-----:|:---------:|
 | **Nemotron NVFP4** | **vLLM** | **95.6** | **100%** | **92%** |
+| **DSpark-Optimized k=3** | **vLLM DSpark** | **56.4** | **100%** | **94%** |
 | **SuperDeepSeek-MQ** | **vLLM DSpark** | **36.8** | **92%*** | **96%** |
 | Ablit (DSpark runtime) | vLLM DSpark | 26.9 | 96%* | 96% |
 | Qwen Q4+DFlash | llama.cpp | 47.3 | 92% | 92% |
@@ -27,10 +30,11 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 
 ## Hardware
 - NVIDIA DGX Spark (GB10, 128 GB unified memory)
+- 2-node TP=2 deployments: MSI EdgeXpert 9105 + bdea, 200G RoCEv2, MTU 9000
 - llama.cpp: CUDA 13.0, sm_121
 - SGLang: FlashInfer SM120 backend, muse-glimmer branch (PR #34262)
-- vLLM: 0.21.1rc1 (ablit, Nemotron) / 0.25.2.dev0 (SuperDeepSeek-MQ)
-- SuperDeepSeek-MQ: ghcr.io/anemll/dspark-vllm-gx10:0.1.1, flashinfer_b12x MoE, DSpark K=1 speculative
+- vLLM: 0.21.1rc1 (ablit, Nemotron) / 0.25.2.dev0 (SuperDeepSeek-MQ, DSpark k=3)
+- Image: ghcr.io/anemll/dspark-vllm-gx10:0.1.1, flashinfer_b12x MoE, DSpark speculative decoding
 
 ## Date
 August 10–12, 2026

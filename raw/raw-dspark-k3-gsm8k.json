@@ -1,0 +1,460 @@
+{
+  "benchmark": "GSM8K",
+  "base_url": "http://localhost:8888/v1",
+  "model": "deepseek-v4-flash-0731-ablit-32-32",
+  "correct": 50,
+  "total": 50,
+  "accuracy": 100.0,
+  "results": [
+    {
+      "i": 0,
+      "expected": "18",
+      "got": "18",
+      "correct": true,
+      "time_s": 2.8,
+      "tokens": 120,
+      "answer_tail": "s ducks lay **16 eggs per day**.  \n2. She eats **3 eggs** for breakfast.  \n3. She uses **4 eggs** for muffins.  \n4. Eggs used per day: \\( 3 + 4 = 7 \\) eggs.  \n5. Eggs left to sell: \\( 16 - 7 = 9 \\) eggs.  \n6. She sells each egg for **$2**.  \n7. Daily earnings: \\( 9 \\times 2 = 18 \\) dollars.\n\n#### 18"
+    },
+    {
+      "i": 1,
+      "expected": "3",
+      "got": "3",
+      "correct": true,
+      "time_s": 2.5,
+      "tokens": 90,
+      "answer_tail": "Let's go step by step.\n\n1. The robe takes **2 bolts of blue fiber**.  \n2. It takes *half that much* white fiber. Half of 2 is:  \n   \\[\n   \\frac{2}{2} = 1 \\text{ bolt of white fiber}\n   \\]\n3. Total bolts needed:  \n   \\[\n   2 + 1 = 3\n   \\]\n\n#### 3"
+    },
+    {
+      "i": 2,
+      "expected": "70000",
+      "got": "70000",
+      "correct": true,
+      "time_s": 4.4,
+      "tokens": 167,
+      "answer_tail": "ue is the original purchase price increased by 150% of that price.\n\n150% of $80,000 = 1.5 \u00d7 $80,000 = $120,000 increase.\n\nSo the new value of the house = $80,000 + $120,000 = $200,000.\n\nNow, profit is the selling price minus the total investment.  \nProfit = $200,000 \u2212 $130,000 = $70,000.\n\n#### 70000"
+    },
+    {
+      "i": 3,
+      "expected": "540",
+      "got": "540",
+      "correct": true,
+      "time_s": 3.1,
+      "tokens": 98,
+      "answer_tail": " step by step.\n\n1. James runs **3 sprints** each time he runs.  \n2. He does this **3 times a week**.  \n3. So, the number of sprints per week is:  \n   3 sprints \u00d7 3 times = 9 sprints per week.\n\n4. Each sprint is **60 meters**.  \n5. Total meters per week = 9 sprints \u00d7 60 meters = 540 meters.\n\n#### 540"
+    },
+    {
+      "i": 4,
+      "expected": "20",
+      "got": "20",
+      "correct": true,
+      "time_s": 2.6,
+      "tokens": 89,
+      "answer_tail": "We know:\n\n- Wendi has 20 chickens.\n- Each chicken gets 3 cups of feed per day.\n- Total feed per day = 20 \u00d7 3 = 60 cups.\n\nShe gives:\n- Morning: 15 cups\n- Afternoon: 25 cups\n\nTotal so far = 15 + 25 = 40 cups.\n\nFinal meal needed = 60 \u2212 40 = 20 cups.\n\n#### 20"
+    },
+    {
+      "i": 5,
+      "expected": "64",
+      "got": "64",
+      "correct": true,
+      "time_s": 4.8,
+      "tokens": 162,
+      "answer_tail": "ch is:  \n   0.60 \u00d7 5 = $3.\n\nSo the pattern is:  \n- 1st glass: $5  \n- 2nd glass: $3  \n- 3rd glass: $5  \n- 4th glass: $3  \n\u2026 and so on.\n\n3. Kylar wants 16 glasses. That means 8 pairs of glasses (since 16 \u00f7 2 = 8).  \nEach pair costs:  \n5 + 3 = $8.\n\n4. Total cost for 8 pairs:  \n8 \u00d7 8 = $64.\n\n**#### 64**"
+    },
+    {
+      "i": 6,
+      "expected": "260",
+      "got": "260",
+      "correct": true,
+      "time_s": 2.8,
+      "tokens": 100,
+      "answer_tail": "go step by step.\n\n1. Seattle has **20 sheep**.  \n2. Charleston has 4 times as many sheep as Seattle:  \n   \\( 4 \\times 20 = 80 \\) sheep.  \n3. Toulouse has twice as many sheep as Charleston:  \n   \\( 2 \\times 80 = 160 \\) sheep.  \n4. Now add them together:  \n   \\( 20 + 80 + 160 = 260 \\) sheep.\n\n#### 260"
+    },
+    {
+      "i": 7,
+      "expected": "160",
+      "got": "160",
+      "correct": true,
+      "time_s": 5.5,
+      "tokens": 198,
+      "answer_tail": "nning**:  \n   So she must download the full 200 GB again at 2 GB/minute.  \n   Time for full download = 200 \u00f7 2 = 100 minutes.\n\n6. **Total time**:  \n   Time before restart (40 min) + restart time (20 min) + full download time (100 min)  \n   = 40 + 20 + 100 = 160 minutes.\n\n**Final answer**:  \n#### 160"
+    },
+    {
+      "i": 8,
+      "expected": "45",
+      "got": "45",
+      "correct": true,
+      "time_s": 8.9,
+      "tokens": 330,
+      "answer_tail": "\nRemaining time = 4 \u2212 2.5 = 1.5 hours.  \nHe drives at 80 mph for 1.5 hours.  \nDistance = 80 \u00d7 1.5 = 120 miles.\n\n**Step 6: Distance from home after the 4 hours**  \nHe was 165 miles from home, then covered 120 miles toward home.  \nDistance remaining = 165 \u2212 120 = 45 miles.\n\n**Final Answer:**  \n#### 45"
+    },
+    {
+      "i": 9,
+      "expected": "460",
+      "got": "460",
+      "correct": true,
+      "time_s": 4.5,
+      "tokens": 158,
+      "answer_tail": "Step 2: Overtime rate**  \nOvertime pay is 1.2 times her regular rate.  \n1.2 \u00d7 $10 = $12 per hour  \n\n**Step 3: Overtime hours**  \nShe worked 45 hours total, so overtime hours = 45 \u2212 40 = 5 hours.  \n\n**Step 4: Overtime pay**  \n5 \u00d7 $12 = $60  \n\n**Step 5: Total earnings**  \n$400 + $60 = $460  \n\n#### 460"
+    },
+    {
+      "i": 10,
+      "expected": "366",
+      "got": "366",
+      "correct": true,
+      "time_s": 2.5,
+      "tokens": 89,
+      "answer_tail": "First month: 60 downloads.  \nSecond month: 3 \u00d7 60 = 180 downloads.  \nThird month: reduced by 30% from the second month.  \n30% of 180 = 0.30 \u00d7 180 = 54.  \nSo third month = 180 \u2212 54 = 126 downloads.\n\nTotal over three months:  \n60 + 180 + 126 = 366.\n\n#### 366"
+    },
+    {
+      "i": 11,
+      "expected": "694",
+      "got": "694",
+      "correct": true,
+      "time_s": 9.6,
+      "tokens": 151,
+      "answer_tail": "ost = 3 \u00d7 68 = $204.\n\n2. **Mini cupcakes**:  \n   - She bought 2 dozen.  \n   - Cost per dozen = $80.  \n   - Cost = 2 \u00d7 80 = $160.\n\n3. **Mini cheesecakes**:  \n   - She bought 6 dozen.  \n   - Cost per dozen = $55.  \n   - Cost = 6 \u00d7 55 = $330.\n\n4. **Total cost**:  \n   - 204 + 160 + 330 = $694.\n\n#### 694"
+    },
+    {
+      "i": 12,
+      "expected": "13",
+      "got": "13",
+      "correct": true,
+      "time_s": 8.4,
+      "tokens": 313,
+      "answer_tail": "n > 12\n\\]  \n\nSince \\( n \\) must be a whole number of years, the first year he starts earning money is year 13.\n\n**Step 5: Check**  \nAfter 12 years: \\( 7.5 \\times 12 - 90 = 90 - 90 = 0 \\) (break-even, not earning)  \nAfter 13 years: \\( 7.5 \\times 13 - 90 = 97.5 - 90 = 7.5 \\) (positive profit)\n\n#### 13"
+    },
+    {
+      "i": 13,
+      "expected": "18",
+      "got": "18",
+      "correct": true,
+      "time_s": 7.7,
+      "tokens": 320,
+      "answer_tail": ", she has 5 left:  \n\\[\n\\frac{1}{2} \\left( \\frac{2x}{3} - 2 \\right) = 5\n\\]\n\nMultiply both sides by 2:  \n\\[\n\\frac{2x}{3} - 2 = 10\n\\]\n\nAdd 2 to both sides:  \n\\[\n\\frac{2x}{3} = 12\n\\]\n\nMultiply both sides by 3:  \n\\[\n2x = 36\n\\]\n\nDivide by 2:  \n\\[\nx = 18\n\\]\n\nSo she started with 18 vacuum cleaners.\n\n#### 18"
+    },
+    {
+      "i": 14,
+      "expected": "60",
+      "got": "60",
+      "correct": true,
+      "time_s": 4.3,
+      "tokens": 164,
+      "answer_tail": "nts.  \n\n3. 25% of the remaining enrolled in jazz dance:  \n   25% of 16 = 0.25 \u00d7 16 = 4 students.  \n   Remaining after jazz = 16 \u2212 4 = 12 students.  \n\n4. The rest enrolled in hip-hop dance:  \n   That\u2019s 12 students.  \n\n5. Percentage of entire students in hip-hop:  \n   (12 / 20) \u00d7 100 = 60%.  \n\n#### 60"
+    },
+    {
+      "i": 15,
+      "expected": "125",
+      "got": "125",
+      "correct": true,
+      "time_s": 3.9,
+      "tokens": 136,
+      "answer_tail": "t = 5,000 \u00d7 0.025 = $125  \n\n**Step 2: Calculate profit from electronic gadgets**  \nCost = $8,000  \nExpected increase = 1.2%  \nProfit = 8,000 \u00d7 0.012 = $96  \n\n**Step 3: Compare profits**  \nJewelry profit = $125  \nGadgets profit = $96  \n\nThe larger profit is from jewelry.\n\n**Final answer:**  \n#### 125"
+    },
+    {
+      "i": 16,
+      "expected": "230",
+      "got": "230",
+      "correct": true,
+      "time_s": 3.5,
+      "tokens": 124,
+      "answer_tail": "p 2:** On the next day, each train travels 150 miles northward.  \nSo, distance covered by each train on day 2 = 150 miles.\n\n**Step 3:** Total distance covered by each train over the two days:  \n80 + 150 = 230 miles.\n\nSince both trains travel the same distances, each train covers 230 miles.\n\n#### 230"
+    },
+    {
+      "i": 17,
+      "expected": "57500",
+      "got": "57500",
+      "correct": true,
+      "time_s": 3.3,
+      "tokens": 117,
+      "answer_tail": "per hour \u00d7 35 hours per week = $700 per week.\n\n2. **Calculate weekly pay as a coach:**  \n   $30 per hour \u00d7 15 hours per week = $450 per week.\n\n3. **Total weekly pay:**  \n   $700 + $450 = $1,150 per week.\n\n4. **Calculate annual salary:**  \n   $1,150 per week \u00d7 50 weeks = $57,500 per year.\n\n#### 57500"
+    },
+    {
+      "i": 18,
+      "expected": "7",
+      "got": "7",
+      "correct": true,
+      "time_s": 3.6,
+      "tokens": 120,
+      "answer_tail": "s a 3-egg omelet every morning.  \n   That\u2019s 3 eggs per day.\n\n2. There are 7 days in a week, so in 1 week she eats:  \n   3 eggs/day \u00d7 7 days = 21 eggs.\n\n3. In 4 weeks, she eats:  \n   21 eggs/week \u00d7 4 weeks = 84 eggs.\n\n4. A dozen is 12 eggs, so the number of dozens is:  \n   84 \u00f7 12 = 7 dozens.\n\n#### 7"
+    },
+    {
+      "i": 19,
+      "expected": "6",
+      "got": "6",
+      "correct": true,
+      "time_s": 6.0,
+      "tokens": 235,
+      "answer_tail": " 2 hours = 1 hour.\n\n---\n\n**Step 4: Find remaining distance**  \nDistance already walked = 4 + 2 = 6 miles.  \nRemaining distance = 12 \u2212 6 = 6 miles.\n\n---\n\n**Step 5: Required speed for remaining distance**  \nSpeed = distance / time = 6 miles / 1 hour = 6 miles per hour.\n\n---\n\n**Final answer:**  \n#### 6"
+    },
+    {
+      "i": 20,
+      "expected": "15",
+      "got": "15",
+      "correct": true,
+      "time_s": 16.4,
+      "tokens": 342,
+      "answer_tail": "orange + water from pineapple = \\( 6 + 9 = 15 \\) liters.\n\n**Step 6: Total volume**  \nRemaining orange = 9 liters, pineapple = 15 liters.  \nTotal = \\( 9 + 15 = 24 \\) liters, which matches the problem statement.\n\n**Final Answer:**  \nThe amount of water in the remaining 24 liters is 15 liters.\n\n#### 15"
+    },
+    {
+      "i": 21,
+      "expected": "14",
+      "got": "14",
+      "correct": true,
+      "time_s": 3.5,
+      "tokens": 135,
+      "answer_tail": "  \n   So Raymond\u2019s current age = 31 + 6 = 37 years old.\n\n3. Raymond had a son at the age of 23.  \n   That means his son was born when Raymond was 23.\n\n4. The number of years since Raymond\u2019s son was born is:  \n   Raymond\u2019s current age \u2212 age when his son was born = 37 \u2212 23 = 14 years ago.\n\n**#### 14**"
+    },
+    {
+      "i": 22,
+      "expected": "7",
+      "got": "7",
+      "correct": true,
+      "time_s": 2.8,
+      "tokens": 99,
+      "answer_tail": "Let's go step by step.\n\n1. First 3 customers buy 1 DVD each:  \n   3 \u00d7 1 = 3 DVDs\n\n2. Next 2 customers buy 2 DVDs each:  \n   2 \u00d7 2 = 4 DVDs\n\n3. Last 3 customers buy 0 DVDs:  \n   3 \u00d7 0 = 0 DVDs\n\n4. Total DVDs sold:  \n   3 + 4 + 0 = 7 DVDs\n\n#### 7"
+    },
+    {
+      "i": 23,
+      "expected": "8",
+      "got": "8",
+      "correct": true,
+      "time_s": 2.6,
+      "tokens": 81,
+      "answer_tail": "We know the candle melts at a rate of 2 centimeters per hour.\n\nThe time from 1:00 PM to 5:00 PM is:\n\n5:00 PM \u2212 1:00 PM = 4 hours.\n\nNow, multiply the rate by the time:\n\n2 cm/hour \u00d7 4 hours = 8 cm.\n\nSo the candle will be 8 centimeters shorter.\n\n#### 8"
+    },
+    {
+      "i": 24,
+      "expected": "26",
+      "got": "26",
+      "correct": true,
+      "time_s": 3.6,
+      "tokens": 129,
+      "answer_tail": "is price is after a 25% discount from the original price.  \n\nA 25% discount means he paid 75% of the original price.  \n\nLet the original price be \\( x \\).  \n\nSo:  \n\\[\n0.75x = 19.50\n\\]  \n\nNow solve for \\( x \\):  \n\\[\nx = \\frac{19.50}{0.75}\n\\]  \n\\[\nx = 26\n\\]  \n\nThe original price was $26.00.  \n\n#### 26"
+    },
+    {
+      "i": 25,
+      "expected": "2",
+      "got": "2",
+      "correct": true,
+      "time_s": 4.3,
+      "tokens": 178,
+      "answer_tail": "6 \\) dollars.\n\n4. **Total cost so far** (without pizza):  \n   \\( 12 + 15 + 6 = 33 \\) dollars.\n\n5. **Remaining amount for pizza**:  \n   \\( 50 - 33 = 17 \\) dollars.\n\n6. **Number of pizza boxes**:  \n   Each box costs $8.50, so  \n   \\( 17 \\div 8.50 = 2 \\).\n\nSo Marie ordered **2** boxes of pizza.\n\n#### 2"
+    },
+    {
+      "i": 26,
+      "expected": "243",
+      "got": "243",
+      "correct": true,
+      "time_s": 2.8,
+      "tokens": 105,
+      "answer_tail": "Let's go step by step.\n\n1. **Cost of shorts**:  \n   3 pairs \u00d7 $16.50 = $49.50  \n\n2. **Cost of pants**:  \n   3 pairs \u00d7 $22.50 = $67.50  \n\n3. **Cost of shoes**:  \n   3 pairs \u00d7 $42.00 = $126.00  \n\n4. **Total cost**:  \n   $49.50 + $67.50 + $126.00 = $243.00  \n\n#### 243"
+    },
+    {
+      "i": 27,
+      "expected": "16",
+      "got": "16",
+      "correct": true,
+      "time_s": 2.8,
+      "tokens": 108,
+      "answer_tail": "Let\u2019s go step by step.\n\n1. Cynthia eats 1 serving per night.  \n2. Each carton has 15 servings.  \n3. So, one carton lasts her 15 days.  \n4. Over 60 days, she will need:  \n   \\( 60 \\div 15 = 4 \\) cartons.  \n5. Each carton costs $4.00.  \n6. Total cost:  \n   \\( 4 \\times 4 = 16 \\) dollars.\n\n#### 16"
+    },
+    {
+      "i": 28,
+      "expected": "25",
+      "got": "25",
+      "correct": true,
+      "time_s": 2.6,
+      "tokens": 88,
+      "answer_tail": "Let's go step by step.\n\n1. The total trip is 60 miles.  \n2. First stop: after 20 miles.  \n3. Second stop: 15 miles before the end of the trip, so that\u2019s at mile 60 \u2212 15 = 45 miles.  \n4. The distance between the first and second stop is:  \n   45 \u2212 20 = 25 miles.\n\n#### 25"
+    },
+    {
+      "i": 29,
+      "expected": "104",
+      "got": "104",
+      "correct": true,
+      "time_s": 5.0,
+      "tokens": 184,
+      "answer_tail": "em says the two pairs of heels together cost **five dollars less** than the boots.  \n   That means:  \n   \\( \\text{heels cost} = \\text{boots cost} - 5 \\)  \n   So:  \n   \\( 99 = \\text{boots cost} - 5 \\)  \n5. Add 5 to both sides:  \n   \\( \\text{boots cost} = 99 + 5 = 104 \\).\n\n**Final answer:**  \n#### 104"
+    },
+    {
+      "i": 30,
+      "expected": "109",
+      "got": "109",
+      "correct": true,
+      "time_s": 4.6,
+      "tokens": 177,
+      "answer_tail": " \\(11x\\).\n\n2. Their total age now is 162:  \n   \\[\n   7x + 11x = 162\n   \\]\n   \\[\n   18x = 162\n   \\]\n\n3. Solve for \\(x\\):  \n   \\[\n   x = \\frac{162}{18} = 9\n   \\]\n\n4. Allen's current age:  \n   \\[\n   11x = 11 \\times 9 = 99\n   \\]\n\n5. Allen's age 10 years from now:  \n   \\[\n   99 + 10 = 109\n   \\]\n\n#### 109"
+    },
+    {
+      "i": 31,
+      "expected": "80",
+      "got": "80",
+      "correct": true,
+      "time_s": 3.7,
+      "tokens": 146,
+      "answer_tail": "re than half the first guess.  \nHalf of 80 is 40.  \n20 more than 40 is 60.\n\n**Step 3:** Third friend\u2019s guess = 25% more than the first guess.  \n25% of 80 is 20.  \n80 + 20 = 100.\n\n**Step 4:** Now find the average of the three guesses:  \n(80 + 60 + 100) / 3 = 240 / 3 = 80.\n\n**Final answer:**  \n#### 80"
+    },
+    {
+      "i": 32,
+      "expected": "35",
+      "got": "35",
+      "correct": true,
+      "time_s": 2.9,
+      "tokens": 84,
+      "answer_tail": "First, let's figure out the daily time John spends on all the dogs.  \n\nEach dog takes 0.5 hours per day.  \nFor 10 dogs:  \n10 \u00d7 0.5 = 5 hours per day.\n\nNow, there are 7 days in a week.  \nSo, weekly hours:  \n5 hours/day \u00d7 7 days/week = 35 hours/week.\n\n#### 35"
+    },
+    {
+      "i": 33,
+      "expected": "70",
+      "got": "70",
+      "correct": true,
+      "time_s": 3.7,
+      "tokens": 136,
+      "answer_tail": "er coins.  \nThen the number of gold coins is \\( s + 30 \\).  \n\nWe know the total number of coins is 110:  \n\\[\ns + (s + 30) = 110\n\\]  \n\\[\n2s + 30 = 110\n\\]  \nSubtract 30 from both sides:  \n\\[\n2s = 80\n\\]  \nDivide by 2:  \n\\[\ns = 40\n\\]  \n\nSo silver coins = 40.  \nGold coins = \\( 40 + 30 = 70 \\).  \n\n#### 70"
+    },
+    {
+      "i": 34,
+      "expected": "23",
+      "got": "23",
+      "correct": true,
+      "time_s": 2.5,
+      "tokens": 98,
+      "answer_tail": "Let's go step by step.\n\n1. Raymond has 40 jewels.  \n2. Aaron has 5 more jewels than half of Raymond's jewels.  \n   - Half of Raymond's jewels = 40 \u00f7 2 = 20  \n   - Aaron has 20 + 5 = 25 jewels.  \n3. Siobhan has 2 fewer jewels than Aaron.  \n   - Siobhan has 25 \u2212 2 = 23 jewels.\n\n#### 23"
+    },
+    {
+      "i": 35,
+      "expected": "9",
+      "got": "9",
+      "correct": true,
+      "time_s": 2.7,
+      "tokens": 96,
+      "answer_tail": "Let's go step by step.\n\n1. First 20 minutes: Mike scores 4 points.  \n2. Second 20 minutes: He scores 25% more points than in the first 20 minutes.  \n   - 25% of 4 = 1  \n   - So he scores 4 + 1 = 5 points in the second 20 minutes.  \n3. Total points = 4 + 5 = 9.\n\n#### 9"
+    },
+    {
+      "i": 36,
+      "expected": "75",
+      "got": "75",
+      "correct": true,
+      "time_s": 3.3,
+      "tokens": 134,
+      "answer_tail": "s per day.  \n   Over 30 days:  \n   \\( 2 \\times 30 = 60 \\) yogurts.\n\n2. **Determine how many packs of 4 he needs**  \n   Each pack has 4 yogurts.  \n   \\( 60 \\div 4 = 15 \\) packs.\n\n3. **Calculate total cost**  \n   Each pack costs $5.00.  \n   \\( 15 \\times 5 = 75 \\) dollars.\n\n**Final answer:**  \n#### $75"
+    },
+    {
+      "i": 37,
+      "expected": "2",
+      "got": "2",
+      "correct": true,
+      "time_s": 4.1,
+      "tokens": 222,
+      "answer_tail": "t \u2014 from step 1, he got $195 from selling all 13 lego sets.  \n   That means he didn\u2019t sell all of them.  \n   Money he actually got = $165.  \n   Number of lego sets sold = \\( 165 \\div 15 = 11 \\).\n\n5. He originally had 13 lego sets.  \n   Sets still left = \\( 13 - 11 = 2 \\).\n\n**Final answer:**  \n#### 2"
+    },
+    {
+      "i": 38,
+      "expected": "10",
+      "got": "10",
+      "correct": true,
+      "time_s": 3.1,
+      "tokens": 167,
+      "answer_tail": " of 3 hours = 1.5 hours each of those two days.  \n   - So total hours for the other two days = 1.5 + 1.5 = 3 hours.  \n5. Total running time per week = 3 hours (first day) + 3 hours (other two days) = 6 hours.  \n6. Speed = total distance \u00f7 total time = 60 miles \u00f7 6 hours = 10 miles per hour.\n\n#### 10"
+    },
+    {
+      "i": 39,
+      "expected": "18",
+      "got": "18",
+      "correct": true,
+      "time_s": 4.8,
+      "tokens": 240,
+      "answer_tail": "Two-thirds of time walking = \\( \\frac{2}{3} \\times 6 = 4\\) hours.\n\n4. **Calculate distance traveled.**  \nDistance running = speed \u00d7 time = \\(6 \\times 2 = 12\\) miles.  \nDistance walking = speed \u00d7 time = \\(1.5 \\times 4 = 6\\) miles.  \nTotal distance = \\(12 + 6 = 18\\) miles.\n\n**Final answer:**  \n#### 18"
+    },
+    {
+      "i": 40,
+      "expected": "8",
+      "got": "8",
+      "correct": true,
+      "time_s": 2.4,
+      "tokens": 127,
+      "answer_tail": " year old.  \n2. Ben\u2019s iPhone is two times older than Suzy\u2019s.  \n   - \"Two times older\" means Ben\u2019s iPhone is 2 \u00d7 Suzy\u2019s age, so:  \n     Ben\u2019s iPhone = 2 \u00d7 1 = 2 years old.  \n3. Brandon\u2019s iPhone is four times as old as Ben\u2019s.  \n   - Brandon\u2019s iPhone = 4 \u00d7 2 = 8 years old.  \n\n**Final answer:**  \n#### 8"
+    },
+    {
+      "i": 41,
+      "expected": "200",
+      "got": "200",
+      "correct": true,
+      "time_s": 3.3,
+      "tokens": 173,
+      "answer_tail": "must be more than 1000 feet away from the dragon.  \n5. The maximum distance she can throw with the gemstone is 1200 feet.  \n6. The distance **outside** the dragon\u2019s reach is:  \n   \\( 1200 - 1000 = 200 \\) feet.\n\nSo she can stand **200 feet** beyond the dragon\u2019s flame reach and still hit it.\n\n#### 200"
+    },
+    {
+      "i": 42,
+      "expected": "26",
+      "got": "26",
+      "correct": true,
+      "time_s": 1.2,
+      "tokens": 54,
+      "answer_tail": "First, find the total number of pieces Grandma Jones made:  \n5 pies \u00d7 8 pieces per pie = 40 pieces.\n\nAt the end, 14 pieces remained.  \nSo the number taken = 40 \u2212 14 = 26.\n\n#### 26"
+    },
+    {
+      "i": 43,
+      "expected": "48",
+      "got": "48",
+      "correct": true,
+      "time_s": 3.2,
+      "tokens": 173,
+      "answer_tail": "lories.  \nRemaining calories allowed: 2000 \u2212 1800 = 200 calories.\n\n4. Now, find how many grams of chips correspond to 200 calories.  \nSince 60g has 250 calories, we set up a proportion:  \n(60g / 250 cal) = (x g / 200 cal)  \nx = (60 \u00d7 200) / 250 = 12000 / 250 = 48g.\n\nSo you can eat 48 grams.\n\n#### 48"
+    },
+    {
+      "i": 44,
+      "expected": "20",
+      "got": "20",
+      "correct": true,
+      "time_s": 3.6,
+      "tokens": 186,
+      "answer_tail": "ks costs $10.00.  \n   For 2 pounds:  \n   \\( 2 \\times 10 = 20 \\) dollars.\n\n3. **Find the total revenue from selling 20 candles.**  \n   Each candle sells for $2.00.  \n   \\( 20 \\times 2 = 40 \\) dollars.\n\n4. **Calculate net profit.**  \n   Profit = Revenue \u2212 Cost  \n   \\( 40 - 20 = 20 \\) dollars.\n\n#### 20"
+    },
+    {
+      "i": 45,
+      "expected": "104",
+      "got": "104",
+      "correct": true,
+      "time_s": 3.7,
+      "tokens": 207,
+      "answer_tail": "**  \nShe wrote twice the number she wrote on Tuesday:  \n\\( 2 \\times 7 = 14 \\) articles on Wednesday.\n\n**Step 4: Total articles over the three days**  \n\\( 5 + 7 + 14 = 26 \\) articles.\n\n**Step 5: Total hours**  \nEach article takes 4 hours.  \n\\( 26 \\times 4 = 104 \\) hours.\n\n**Final Answer:**  \n#### 104"
+    },
+    {
+      "i": 46,
+      "expected": "163",
+      "got": "163",
+      "correct": true,
+      "time_s": 3.2,
+      "tokens": 161,
+      "answer_tail": "-it notes.  \n4. At work, she used **220** post-it notes (one on each cup).  \n5. After using them, she had **23** left.\n\nWe can write the equation:\n\n\\[\n80 + x - 220 = 23\n\\]\n\nSimplify:\n\n\\[\nx - 140 = 23\n\\]\n\nAdd 140 to both sides:\n\n\\[\nx = 163\n\\]\n\nSo the package contained **163** post-it notes.\n\n#### 163"
+    },
+    {
+      "i": 47,
+      "expected": "800",
+      "got": "800",
+      "correct": true,
+      "time_s": 3.8,
+      "tokens": 218,
+      "answer_tail": ".  \nBlue tie cost = $40.  \nRed tie cost = \\( 40 \\times 1.5 = 60 \\) dollars.\n\n**Step 4: Find total spent on red ties.**  \nCost for red ties = \\( 10 \\times 60 = 600 \\) dollars.\n\n**Step 5: Find total spent on all ties.**  \nTotal = blue ties ($200) + red ties ($600) = $800.\n\n**Final answer:**  \n#### 800"
+    },
+    {
+      "i": 48,
+      "expected": "8",
+      "got": "8",
+      "correct": true,
+      "time_s": 1.8,
+      "tokens": 86,
+      "answer_tail": "Let\u2019s go step by step.  \n\n1. First, convert the total length of wire from feet to inches.  \n   Since 1 foot = 12 inches,  \n   4 feet = 4 \u00d7 12 = 48 inches.\n\n2. The wire is cut into pieces that are 6 inches long.  \n   Number of pieces = 48 \u00f7 6 = 8.\n\n**#### 8**"
+    },
+    {
+      "i": 49,
+      "expected": "30",
+      "got": "30",
+      "correct": true,
+      "time_s": 2.8,
+      "tokens": 161,
+      "answer_tail": "**:  \n   We are told that \\( \\frac{3}{4} \\) of the building is occupied.  \n   \\[\n   \\frac{3}{4} \\times 120 = 90 \\text{ occupied units}\n   \\]\n\n3. **Unoccupied units**:  \n   Subtract the occupied units from the total.  \n   \\[\n   120 - 90 = 30 \\text{ unoccupied units}\n   \\]\n\n**Final answer:**  \n#### 30"
+    }
+  ]
+}
