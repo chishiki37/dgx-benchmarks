@@ -49,7 +49,12 @@ Ablit's release was a wider-net quantization + abliteration; SuperDeepSeek is mi
 
 ## 3. Speed: Decode Throughput
 
-**Protocol:** 512-token generation, 3 reps per config, temperature=0, BS=1, single-stream. Wall-clock timing via OpenAI-compatible API. Recipe-default serving parameters after autoresearch sweeps.
+**Protocol:** Decode throughput measured with two harnesses, each on the same canonical prompt set used for its prior ablit runs:
+
+1. **Q&A-style single-stream** (used for the 36.8 / 26.9 comparison): prompt `"Explain the concept of recursion in programming, with a simple example."`, `max_tokens=2048`, `temperature=0.7`, 3 reps, median tok/s.
+2. **Creative-writing concurrency** (used for the C=4, C=8 row): `f"Write a short creative story about topic {worker_id}_{j}. Be creative."` × 3 reps per worker, `max_tokens=512`, `temperature=0.7`. Wall-clock from first request sent to last response received.
+
+Same model, same node, **different prompts give different single-stream numbers**: 36.8 tok/s on the recursion Q&A prompt vs 32.9 tok/s on the creative-writing prompt. Thinking mode is engaged more aggressively by "varied vocabulary / be creative" framing (longer reasoning chains before content decode). We report both because (a) the Q&A number is the right baseline for comparison to ablit's 26.9, and (b) the C=4 / C=8 numbers were generated with the creative prompt that is the apples-to-apples match for the concurrent tests.
 
 | Model | Single-stream (tok/s) | C=4 aggregate (tok/s) | C=8 aggregate (tok/s) | TTFT (short prompt) |
 |-------|:---------------------:|:----------------------:|:----------------------:|:-------------------:|
