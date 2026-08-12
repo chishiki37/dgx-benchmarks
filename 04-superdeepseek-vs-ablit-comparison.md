@@ -184,7 +184,8 @@ The remaining 2 SuperDeepSeek failures were both `finish_reason: length` — the
 | **Memory (active)** | ~76 GB / node | ~79 GB / node | Ablit (slightly lighter) |
 | **On-disk size** | 156 GB | 169.5 GB (+8.7%) | Ablit |
 | **Context window** | 65K (used) | **1M (configured and verified)** | SuperDeepSeek |
-| **Speculative decoding** | ❌ | ✅ DSpark K=1 | SuperDeepSeek |
+| **Speculative decoding** | ❌ | ✅ DSpark K=1 (measured acceptance = 78.4%) | SuperDeepSeek |
+| **Accepted tokens/step (effective)** | 1.00 (no spec) | **1.78 (K=1 + measured 0.78 acc)** | SuperDeepSeek |
 | **Surgical abliteration** | wide | surgical (46 attn.wo_b + head) | SuperDeepSeek |
 | **Reasoning mode** | deepseek_v4 | deepseek_v4 | Tie |
 | **Output head precision** | NVFP4 | **BF16 (rank-64 overlay)** | SuperDeepSeek |
@@ -201,7 +202,23 @@ GB10's unified memory at LPDDR5X means both models decode at the ceiling of:
 tok/s ≈ effective_bandwidth / weight_size
 ```
 
-This is why both are bandwidth-bound. The difference is what the model achieves **per step**. With no speculation, ablit decodes one token per memory read. With DSpark K=1, SuperDeepSeek decodes on average ~1.4 tokens per memory read (verified by the 1.37× speedup matching K=1 acceptance rates).
+This is why both are bandwidth-bound. The difference is what the model achieves **per step**. With no speculation, ablit decodes one token per memory read. With DSpark K=1, SuperDeepSeek attempts two tokens per memory read (one verified, one drafted) and collects the draft whenever it matches.
+
+## Measured speculative-decoding metrics (live SuperDeepSeek serve)
+
+Queried from `http://localhost:8888/v1/metrics` (Prometheus scrape of vLLM engine 0, model `SuperDeepseek-V4-Flash-abliterated-MQ-2xDGX`, after all 50 GSM8K + 50 HumanEval + concurrency benchmark runs):
+
+| Metric | Value |
+|---|---|
+| `vllm:spec_decode_num_drafts_total` | **36,608** |
+| `vllm:spec_decode_num_draft_tokens_total` | **36,608** (K=1: 1 token/draft) |
+| `vllm:spec_decode_num_accepted_tokens_total` | **28,701** |
+| `vllm:spec_decode_num_accepted_tokens_per_pos{position=0}` | **28,701** |
+| **Mean draft-model acceptance rate** | **78.4 % (28701 / 36608)** |
+
+With K=1 and **78.4 % acceptance**, the mean accepted-tokens-per-step = 1 + 0.784 = **1.784 tokens / step**. That accounts for the **1.37× decode throughput gap** between SuperDeepSeek (36.8 tok/s) and ablit (26.9 tok/s) at single-stream — the math holds, but only because the measurement is end-to-end on the actual served model, not the *theoretical* 1.4×. Acceptance is running higher than the *constant-overhead-free* theoretical 1.4× estimate because creative-writing prompts sit on long thought-traces which the self-MTP head predicts more accurately than the first-token distribution.
+
+For ablit, no speculative metrics were captured because the vLLM image used (`vllm-dspark-runtime:dspark-nvfp4-stage-c`) does not implement `--speculative-config` for the DS4 architecture — it raises `NotImplementedError` on startup. This is documented in the upstream recipe; see the *Known limitations* row in the summary table at the top.
 
 ### DSpark Speculative Decoding Anatomy
 
