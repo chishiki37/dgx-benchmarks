@@ -14,6 +14,8 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 
 5. **[DSpark-Optimized k=3 Comparison](05-dspark-optimized-k3-comparison.md)** — Third abliterated checkpoint (`drowzeys/keys-...-Abliterated-32-32`) with DSpark k=3 speculative decoding. Fastest recipe yet: 56.4 tok/s single-stream (2.1× ablit), 100% GSM8K, 94% HumanEval. Includes per-position spec-decode acceptance analysis and HumanEval failure diff across all three checkpoints.
 
+6. **[Post-Hotfix Revalidation](06-post-hotfix-revalidation.md)** — Same k=3 deployment after adopting Mia's hotfix set (#21/#22/#26v2/#27). Quality fully preserved: GSM8K 50/50, HumanEval 47/50 with bit-identical temp-0 failure set. Short-prompt speed unchanged (creative cells ±3%), GSM8K latency −29% (4.1→2.9 s/q). Intended gains confirmed: warm long-prefix TTFT 7.5–15× faster. Includes the harness-mismatch caveat (prompt wording + string-vs-float scoring explain apparent regressions).
+
 ## Key Results
 
 | Config | Framework | Decode (tok/s) | GSM8K | HumanEval |
@@ -37,4 +39,4 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 - Image: ghcr.io/anemll/dspark-vllm-gx10:0.1.1, flashinfer_b12x MoE, DSpark speculative decoding
 
 ## Date
-August 10–12, 2026
+August 10–14, 2026

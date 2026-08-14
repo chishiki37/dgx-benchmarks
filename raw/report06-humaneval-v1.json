@@ -1,0 +1,313 @@
+{
+  "benchmark": "HumanEval-chat",
+  "model": "deepseek-v4-flash-0731-ablit-32-32",
+  "date": "2026-08-14",
+  "post_hotfix": true,
+  "passed": 48,
+  "total": 50,
+  "pass_at_1": 96.0,
+  "truncations": 0,
+  "real_bugs": 2,
+  "results": [
+    {
+      "task_id": "HumanEval/0",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/2",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/3",
+      "pass": false,
+      "status": "BUG",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/4",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/5",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/6",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/7",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/8",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/9",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/11",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/12",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/13",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/14",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/15",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/16",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/17",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/18",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/19",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/20",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/21",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/22",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/23",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/24",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/25",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/26",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/27",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/28",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/29",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/30",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/31",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/32",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/33",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/34",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/35",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/36",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/37",
+      "pass": false,
+      "status": "BUG",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/38",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/39",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/40",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/41",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/42",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/43",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/44",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/45",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/46",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/47",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/48",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    },
+    {
+      "task_id": "HumanEval/49",
+      "pass": true,
+      "status": "PASS",
+      "finish": "stop"
+    }
+  ]
+}
