@@ -1,0 +1,2 @@
+launched qwen38fp8 port=8090 k=1 kv=auto util=0.90 maxlen=262144
+HEALTHY after 562s

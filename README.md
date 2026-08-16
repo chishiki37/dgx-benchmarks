@@ -18,6 +18,8 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 
 7. **[Qwen3.8 Runtime Showdown (single Spark)](07-qwen38-runtime-showdown-single-spark.md)** — Qwen3.8-27B-NVFP4, three runtimes head-to-head on one GB10: drowzeys vLLM MTP3 vs SGLang DSPARK vs stock vLLM k=3. The drowzeys 31.7 tok/s claim does **not** reproduce (19.5–20.6 measured, parity with MiaAI ~21, 1.3× sglang's 16); quality is runtime-neutral (94–96% GSM8K, 92% HumanEval everywhere); SGLang wins prefill 3.5–10×. Includes the full forensics: removed `--rope-scaling` CLI, the `mamba_block_size` crash that breaks 1M+MTP on the drowzeys image, thinking-leak into `content` without a reasoning parser, and a blind battery gate that overwrote good results with zeros.
 
+8. **[Qwen3.8 FP8-Uncensored (single Spark)](08-qwen38-fp8-uncensored-single-spark.md)** — `orcarouter/Qwen3.8-27B-Uncensored-FP8` (gated, block-FP8, 1 MTP layer) on the same node + battery as Report 07. FP8 decode 12.4 tok/s (MTP1 +57%, bf16 KV wins by a hair) vs NVFP4's 19.5–20.7 — ~1.6× slower, less than the 2× weight-bytes ratio because the checkpoint kept only 1 of 3 MTP layers. Quality is quant- and abliteration-neutral: GSM8K 96%, HumanEval 90%, IFEval 0.82, GPQA 0.44, HLE 0.11 — all within NVFP4 noise. Includes the 04af IPv6 blackhole (Python HTTP hangs, curl survives) and the lm_eval timeout/session-close failure mode slow models trigger.
+
 ## Key Results
 
 | Config | Framework | Decode (tok/s) | GSM8K | HumanEval |
@@ -27,6 +29,7 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 | **SuperDeepSeek-MQ** | **vLLM DSpark** | **36.8** | **92%*** | **96%** |
 | Ablit (DSpark runtime) | vLLM DSpark | 26.9 | 96%* | 96% |
 | Qwen3.8 drowzeys MTP3 (256K) | vLLM GB10 0.27 | 19.5–20.6 | 94% | 92% |
+| Qwen3.8 FP8-Uncensored MTP1 | vLLM GB10 0.27 | 12.4 | 96% | 90% |
 | Qwen3.8 MiaAI-style k=3 | vLLM nightly | ~21† | 96% | 92% |
 | Qwen3.8 SGLang DSPARK | SGLang | 15.3–16.0 | 96% | 92% |
 | Qwen Q4+DFlash | llama.cpp | 47.3 | 92% | 92% |

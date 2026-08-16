@@ -1,0 +1,3 @@
+[thinking-off 512tok] tokens=512 total=41.56s TTFT=0.38s e2e=12.32 tok/s decode~=12.41 tok/s
+[thinking-on  512tok] tokens=512 total=41.78s TTFT=0.31s e2e=12.25 tok/s decode~=12.32 tok/s
+[thinking-off 1024tok] tokens=717 total=58.29s TTFT=0.31s e2e=12.30 tok/s decode~=12.35 tok/s

@@ -1,0 +1,6 @@
+ctx_pp @ d2048: prompt_tokens=1077 e2e=1937ms prefill~=556 tok/s
+ctx_pp @ d4096: prompt_tokens=2097 e2e=2340ms prefill~=896 tok/s
+ctx_pp @ d8192: prompt_tokens=4137 e2e=3420ms prefill~=1210 tok/s
+ctx_tg @ d2048: prompt_tokens=1077 TTFT=804ms gen=46tok decode~=13.84 tok/s
+ctx_tg @ d4096: prompt_tokens=2097 TTFT=1221ms gen=54tok decode~=12.12 tok/s
+ctx_tg @ d8192: prompt_tokens=4137 TTFT=2884ms gen=91tok decode~=11.99 tok/s

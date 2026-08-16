@@ -1,0 +1,20 @@
+battery start 2026-08-16T19:14:52+0700
+20:14:08 sweep gate passed (winner=mtp1_kvauto_u90)
+20:14:08 server healthy
+20:14:14 warmup done
+20:14:14 === GSM8K ===
+20:38:36 GSM8K_RC=0 (1462s)
+20:38:36 === HUMANEVAL ===
+21:32:43 HUMANEVAL_RC=0 (3247s)
+21:32:43 === IFEVAL ===
+22:10:39 IFEVAL_RC=1 (2276s)
+22:10:39 === GPQA ===
+22:13:23 GPQA_RC=0 (164s)
+22:13:23 === HLE ===
+22:16:51 HLE_RC=0 (208s)
+22:16:51 === DECODE ===
+22:19:13 DECODE_RC=0 (142s)
+22:19:13 === ARENA ===
+22:24:17 ARENA_RC=0 (304s)
+22:24:17 battery end; RCs: {'gsm8k': 0, 'humaneval': 0, 'ifeval': 1, 'gpqa': 0, 'hle': 0, 'decode': 0, 'arena': 0}
+22:24:17 BATTERY-DONE

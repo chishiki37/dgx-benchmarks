@@ -1,0 +1,12 @@
+ctx_pp @ d2048: prompt_tokens=1077 e2e=1981ms prefill~=544 tok/s
+ctx_pp @ d4096: prompt_tokens=2097 e2e=2383ms prefill~=880 tok/s
+ctx_pp @ d8192: prompt_tokens=4137 e2e=3471ms prefill~=1192 tok/s
+ctx_pp @ d16384: prompt_tokens=8247 e2e=5722ms prefill~=1441 tok/s
+ctx_pp @ d32768: prompt_tokens=16437 e2e=10514ms prefill~=1563 tok/s
+ctx_pp @ d51200: prompt_tokens=25647 e2e=16469ms prefill~=1557 tok/s
+ctx_tg @ d2048: prompt_tokens=1077 TTFT=789ms gen=30tok decode~=12.55 tok/s
+ctx_tg @ d4096: prompt_tokens=2097 TTFT=1226ms gen=57tok decode~=12.07 tok/s
+ctx_tg @ d8192: prompt_tokens=4137 TTFT=2293ms gen=59tok decode~=12.00 tok/s
+ctx_tg @ d16384: prompt_tokens=8247 TTFT=4527ms gen=40tok decode~=11.85 tok/s
+ctx_tg @ d32768: prompt_tokens=16437 TTFT=9256ms gen=45tok decode~=11.25 tok/s
+ctx_tg @ d51200: prompt_tokens=25647 TTFT=15152ms gen=114tok decode~=10.91 tok/s

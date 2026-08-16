@@ -1,0 +1,197 @@
+{
+ "port": 8090,
+ "served_model": "qwen38-fp8",
+ "winner": {
+  "config": "mtp1_kvauto_u90",
+  "k": 1,
+  "kv": "auto",
+  "util": 0.9,
+  "status": "ok",
+  "boot_s": 565,
+  "decode_rc": 0,
+  "arena_rc": 0,
+  "decode_runs": [
+   {
+    "label": "thinking-off 512tok",
+    "tokens": 512,
+    "total": 42.4,
+    "ttft": 0.5,
+    "e2e": 12.07,
+    "decode": 12.19
+   },
+   {
+    "label": "thinking-on  512tok",
+    "tokens": 512,
+    "total": 39.95,
+    "ttft": 0.22,
+    "e2e": 12.82,
+    "decode": 12.86
+   },
+   {
+    "label": "thinking-off 1024tok",
+    "tokens": 754,
+    "total": 60.68,
+    "ttft": 0.17,
+    "e2e": 12.43,
+    "decode": 12.44
+   }
+  ],
+  "mean_decode": 12.5
+ },
+ "all": [
+  {
+   "config": "mtp1_kvfp8_u90",
+   "k": 1,
+   "kv": "fp8",
+   "util": 0.9,
+   "status": "ok",
+   "boot_s": 503,
+   "decode_rc": 0,
+   "arena_rc": 0,
+   "decode_runs": [
+    {
+     "label": "thinking-off 512tok",
+     "tokens": 512,
+     "total": 41.56,
+     "ttft": 0.4,
+     "e2e": 12.32,
+     "decode": 12.41
+    },
+    {
+     "label": "thinking-on  512tok",
+     "tokens": 512,
+     "total": 41.68,
+     "ttft": 0.21,
+     "e2e": 12.29,
+     "decode": 12.32
+    },
+    {
+     "label": "thinking-off 1024tok",
+     "tokens": 669,
+     "total": 53.23,
+     "ttft": 0.3,
+     "e2e": 12.57,
+     "decode": 12.62
+    }
+   ],
+   "mean_decode": 12.45
+  },
+  {
+   "config": "mtp0_kvfp8_u90",
+   "k": 0,
+   "kv": "fp8",
+   "util": 0.9,
+   "status": "ok",
+   "boot_s": 430,
+   "decode_rc": 0,
+   "arena_rc": 0,
+   "decode_runs": [
+    {
+     "label": "thinking-off 512tok",
+     "tokens": 512,
+     "total": 64.56,
+     "ttft": 0.25,
+     "e2e": 7.93,
+     "decode": 7.95
+    },
+    {
+     "label": "thinking-on  512tok",
+     "tokens": 512,
+     "total": 64.48,
+     "ttft": 0.2,
+     "e2e": 7.94,
+     "decode": 7.95
+    },
+    {
+     "label": "thinking-off 1024tok",
+     "tokens": 625,
+     "total": 78.66,
+     "ttft": 0.15,
+     "e2e": 7.95,
+     "decode": 7.95
+    }
+   ],
+   "mean_decode": 7.95
+  },
+  {
+   "config": "mtp1_kvauto_u90",
+   "k": 1,
+   "kv": "auto",
+   "util": 0.9,
+   "status": "ok",
+   "boot_s": 565,
+   "decode_rc": 0,
+   "arena_rc": 0,
+   "decode_runs": [
+    {
+     "label": "thinking-off 512tok",
+     "tokens": 512,
+     "total": 42.4,
+     "ttft": 0.5,
+     "e2e": 12.07,
+     "decode": 12.19
+    },
+    {
+     "label": "thinking-on  512tok",
+     "tokens": 512,
+     "total": 39.95,
+     "ttft": 0.22,
+     "e2e": 12.82,
+     "decode": 12.86
+    },
+    {
+     "label": "thinking-off 1024tok",
+     "tokens": 754,
+     "total": 60.68,
+     "ttft": 0.17,
+     "e2e": 12.43,
+     "decode": 12.44
+    }
+   ],
+   "mean_decode": 12.5
+  },
+  {
+   "config": "mtp1_kvfp8_u92",
+   "k": 1,
+   "kv": "fp8",
+   "util": 0.92,
+   "status": "ok",
+   "boot_s": 525,
+   "decode_rc": 0,
+   "arena_rc": 0,
+   "decode_runs": [
+    {
+     "label": "thinking-off 512tok",
+     "tokens": 512,
+     "total": 42.15,
+     "ttft": 0.48,
+     "e2e": 12.15,
+     "decode": 12.26
+    },
+    {
+     "label": "thinking-on  512tok",
+     "tokens": 512,
+     "total": 42.37,
+     "ttft": 0.26,
+     "e2e": 12.08,
+     "decode": 12.14
+    },
+    {
+     "label": "thinking-off 1024tok",
+     "tokens": 670,
+     "total": 55.17,
+     "ttft": 0.36,
+     "e2e": 12.14,
+     "decode": 12.21
+    }
+   ],
+   "mean_decode": 12.2
+  }
+ ],
+ "ranking": [
+  "mtp1_kvauto_u90",
+  "mtp1_kvfp8_u90",
+  "mtp1_kvfp8_u92",
+  "mtp0_kvfp8_u90"
+ ]
+}

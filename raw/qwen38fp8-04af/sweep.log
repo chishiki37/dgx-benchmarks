@@ -1,0 +1,15 @@
+19:14:52 === CONFIG mtp1_kvfp8_u90 (k=1 kv=fp8 util=0.90) ===
+19:23:38 warmup done in 23s (big-prefill reply: READY)
+19:26:50 CONFIG mtp1_kvfp8_u90 done: mean decode 12.45 tok/s (boot 503s)
+19:26:50 === CONFIG mtp0_kvfp8_u90 (k=0 kv=fp8 util=0.90) ===
+19:34:22 warmup done in 23s (big-prefill reply: READY)
+19:38:48 CONFIG mtp0_kvfp8_u90 done: mean decode 7.95 tok/s (boot 430s)
+19:38:48 === CONFIG mtp1_kvauto_u90 (k=1 kv=auto util=0.90) ===
+19:48:33 warmup done in 21s (big-prefill reply: READY)
+19:51:51 CONFIG mtp1_kvauto_u90 done: mean decode 12.50 tok/s (boot 565s)
+19:51:51 === CONFIG mtp1_kvfp8_u92 (k=1 kv=fp8 util=0.92) ===
+20:00:57 warmup done in 22s (big-prefill reply: READY)
+20:04:06 CONFIG mtp1_kvfp8_u92 done: mean decode 12.20 tok/s (boot 525s)
+20:04:06 WINNER: mtp1_kvauto_u90 (12.50 tok/s) — restarting fresh for battery
+20:14:03 warmup done in 21s (big-prefill reply: READY)
+20:14:03 SWEEP-DONE winner=mtp1_kvauto_u90

@@ -1,0 +1,27 @@
+{
+  "accuracy": 96.0,
+  "correct": 48,
+  "total": 50,
+  "errors": 0,
+  "elapsed_s": 1461.4970352649689,
+  "avg_per_question_s": 29.229940705299377,
+  "max_tokens": 4096,
+  "failures": [
+    {
+      "question_num": 13,
+      "predicted": "12",
+      "expected": "13",
+      "finish_reason": "stop",
+      "completion_tokens": 1624,
+      "response_preview": "\n\nEach year, Carlos earns:\n\n7 lemons \u00d7 $1.50 = $10.50\n\nEach year, he spends:\n\n$3.00\n\nSo his net gain per year is:\n\n$10.50 \u2212 $3.00 = $7.50\n\nHe needs to recover the initial $90 planting cost:\n\n$90 \u00f7 $7.50 = 12\n\nSo it will take 12 years before he has recovered his cost and starts earning money.\n\n#### 1"
+    },
+    {
+      "question_num": 15,
+      "predicted": "40",
+      "expected": "60",
+      "finish_reason": "stop",
+      "completion_tokens": 233,
+      "response_preview": "\n\n20% of 20 students enrolled in contemporary dance:\n\n\\[\n0.20 \\times 20 = 4\n\\]\n\nRemaining students:\n\n\\[\n20 - 4 = 16\n\\]\n\n25% of the remaining students enrolled in jazz dance:\n\n\\[\n0.25 \\times 16 = 4\n\\]\n\nThe rest enrolled in hip-hop dance:\n\n\\[\n16 - 4 = 8\n\\]\n\nPercentage of the entire class enrolled in h"
+    }
+  ]
+}
