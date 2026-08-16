@@ -1,0 +1,1 @@
+/tmp/stage6_battery.sh: line 49: 406572 Killed                  $PY /tmp/qbench/hle_eval2.py --base-url http://127.0.0.1:8888/v1 --model qwen38-27b-unsloth-nvfp4 --limit 100 --concurrency 4 --output $OUT/hle_$LABEL.json >> "$LOG" 2>&1

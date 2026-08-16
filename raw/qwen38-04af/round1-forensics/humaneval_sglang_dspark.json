@@ -1,0 +1,409 @@
+{
+  "benchmark": "HumanEval-chat",
+  "model": "qwen38-nvfp4",
+  "passed": 0,
+  "total": 50,
+  "pass_at_1": 0.0,
+  "results": [
+    {
+      "task_id": "HumanEval/0",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "shold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "hin each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/2",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": ") and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    >>> truncate_number(3.5)\n    0.5\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/3",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "n should return True. Otherwise it should return False.\n    >>> below_zero([1, 2, 3])\n    False\n    >>> below_zero([1, 2, -4, 5])\n    True\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/4",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "ment and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/5",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "y two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/6",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "()) has maximum two levels of nesting while ((())) has three.\n\n    >>> parse_nested_parens('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/7",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/8",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "ld be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/9",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "indromic suffix.\n    >>> make_palindrome('')\n    ''\n    >>> make_palindrome('cat')\n    'catac'\n    >>> make_palindrome('cata')\n    'catac'\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/11",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "g only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/12",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": " case the input list is empty.\n    >>> longest([])\n\n    >>> longest(['a', 'b', 'c'])\n    'a'\n    >>> longest(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/13",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": " greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    1\n    >>> greatest_common_divisor(25, 15)\n    5\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/14",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/15",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": " space-delimited numbers starting from 0 upto n inclusive.\n    >>> string_sequence(0)\n    '0'\n    >>> string_sequence(5)\n    '0 1 2 3 4 5'\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/16",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "(regardless of case) does it consist of\n    >>> count_distinct_characters('xyzXYZ')\n    3\n    >>> count_distinct_characters('Jerry')\n    4\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/17",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "o beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/18",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "verlaping cases.\n    >>> how_many_times('', 'a')\n    0\n    >>> how_many_times('aaa', 'a')\n    3\n    >>> how_many_times('aaaa', 'aa')\n    3\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/19",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'one three five'\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/20",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "osest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/21",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "lest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/22",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "n values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/23",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "\n\ndef strlen(string: str) -> int:\n    \"\"\" Return length of given string\n    >>> strlen('')\n    0\n    >>> strlen('abc')\n    3\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/24",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly, smaller than n\n    >>> largest_divisor(15)\n    5\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/25",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "qual to the product of all factors\n    >>> factorize(8)\n    [2, 2, 2]\n    >>> factorize(25)\n    [5, 5]\n    >>> factorize(70)\n    [2, 5, 7]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/26",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "t occur more than once.\n    Keep order of elements left the same as in the input.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 3, 4]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/27",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "str:\n    \"\"\" For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\n    >>> flip_case('Hello')\n    'hELLO'\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/28",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "tr:\n    \"\"\" Concatenate list of strings into a single string\n    >>> concatenate([])\n    ''\n    >>> concatenate(['a', 'b', 'c'])\n    'abc'\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/29",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": " given prefix.\n    >>> filter_by_prefix([], 'a')\n    []\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/30",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": ">> get_positive([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/31",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "me(11)\n    True\n    >>> is_prime(13441)\n    True\n    >>> is_prime(61)\n    True\n    >>> is_prime(4)\n    False\n    >>> is_prime(1)\n    False\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/32",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "]), 2) # f(x) = 1 + 2x\n    -0.5\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3\n    1.0\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/33",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [2, 6, 3, 4, 8, 9, 5]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/34",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "def unique(l: list):\n    \"\"\"Return sorted unique elements in a list\n    >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [0, 2, 3, 5, 9, 123]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/35",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "urn maximum element in the list.\n    >>> max_element([1, 2, 3])\n    3\n    >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    123\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/36",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": " integers less than n which are divisible by 11 or 13.\n    >>> fizz_buzz(50)\n    0\n    >>> fizz_buzz(78)\n    2\n    >>> fizz_buzz(79)\n    3\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/37",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": " values of the even indicies of l, but sorted.\n    >>> sort_even([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_even([5, 6, 3, 4])\n    [3, 6, 5, 4]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/38",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "\".join(groups)\n\n\ndef decode_cyclic(s: str):\n    \"\"\"\n    takes as input string encoded with encode_cyclic function. Returns decoded string.\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/39",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": ".\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/40",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "s_sum_to_zero([1, 2, 3, 7])\n    False\n    >>> triples_sum_to_zero([2, 4, -5, 3, 9, 7])\n    True\n    >>> triples_sum_to_zero([1])\n    False\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/41",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/42",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "ented by 1.\n    >>> incr_list([1, 2, 3])\n    [2, 3, 4]\n    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [6, 4, 6, 3, 4, 4, 10, 1, 124]\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/43",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "pairs_sum_to_zero([1, 2, 3, 7])\n    False\n    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])\n    True\n    >>> pairs_sum_to_zero([1])\n    False\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/44",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "base numbers are less than 10.\n    >>> change_base(8, 3)\n    '22'\n    >>> change_base(8, 2)\n    '1000'\n    >>> change_base(7, 2)\n    '111'\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/45",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "\n\ndef triangle_area(a, h):\n    \"\"\"Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3)\n    7.5\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/46",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "te the n-th element of the fib4 number sequence.  Do not use recursion.\n    >>> fib4(5)\n    4\n    >>> fib4(6)\n    8\n    >>> fib4(7)\n    14\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/47",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": ":\n    \"\"\"Return median of elements in the list l.\n    >>> median([3, 1, 2, 4, 5])\n    3\n    >>> median([-10, 4, 6, 1000, 10, 20])\n    15.0\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/48",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": "indrome('')\n    True\n    >>> is_palindrome('aba')\n    True\n    >>> is_palindrome('aaaaa')\n    True\n    >>> is_palindrome('zbcd')\n    False\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "task_id": "HumanEval/49",
+      "pass": false,
+      "status": "BUG",
+      "finish": "error",
+      "code_tail": ".\n    >>> modp(3, 5)\n    3\n    >>> modp(1101, 101)\n    2\n    >>> modp(0, 101)\n    1\n    >>> modp(3, 11)\n    8\n    >>> modp(100, 101)\n    1\n    \"\"\"\nERROR: <urlopen error [Errno 111] Connection refused>",
+      "raw_tail": "ERROR: <urlopen error [Errno 111] Connection refused>"
+    }
+  ]
+}

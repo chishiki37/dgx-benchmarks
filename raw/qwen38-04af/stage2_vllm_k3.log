@@ -1,0 +1,134 @@
+stage2 start 2026-08-15T11:02:22+07:00
+access: gpqa=200 hle=302
+2026-08-15:11:02:24 WARNING  [config.evaluate_config:287] --limit SHOULD ONLY BE USED FOR TESTING. REAL METRICS SHOULD NOT BE COMPUTED USING LIMIT.
+2026-08-15:11:02:30 INFO     [_cli.run:388] Selected Tasks: ['ifeval']
+2026-08-15:11:02:30 WARNING  [evaluator:184] pretrained=None appears to be an instruct or chat variant but chat template is not applied. Recommend setting `apply_chat_template`
+        (optionally `fewshot_as_multiturn`).
+2026-08-15:11:02:30 INFO     [evaluator:214] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2026-08-15:11:02:30 WARNING  [evaluator:226] generation_kwargs: {'max_gen_toks': 8192, 'temperature': 0} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+2026-08-15:11:02:30 INFO     [evaluator:239] Initializing local-chat-completions model, with arguments: {'model': 'qwen38-27b-unsloth-nvfp4', 'base_url': 'http://127.0.0.1:8888/v1/chat/completions', 'num_concurrent': 1, 'max_retries': 3, 'tokenized_requests': False}
+2026-08-15:11:02:30 INFO     [models.api_models:179] Using max length 2048 - 1
+2026-08-15:11:02:30 INFO     [models.api_models:182] Concurrent requests are disabled. To enable concurrent requests, set `num_concurrent` > 1.
+2026-08-15:11:02:30 INFO     [models.api_models:200] Using tokenizer None
+Traceback (most recent call last):
+  File "/tmp/benchvenv/bin/lm_eval", line 6, in <module>
+    sys.exit(cli_evaluate())
+             ^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/__main__.py", line 10, in cli_evaluate
+    parser.execute(args)
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/_cli/harness.py", line 60, in execute
+    args.func(args)
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/_cli/run.py", line 391, in _execute
+    results = simple_evaluate(
+              ^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/utils.py", line 575, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/evaluator.py", line 302, in simple_evaluate
+    loaded = task_manager.load(tasks)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/manager.py", line 208, in load
+    obj = self._load_spec(spec) if not isinstance(spec, (Task, Group)) else spec  # type:ignore[invalid-argument-type]
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/manager.py", line 154, in _load_spec
+    return self._factory.build(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 61, in build
+    return self._build_task(entry, overrides)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 67, in _build_task
+    cfg = self._load_full_config(entry, overrides)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 261, in _load_full_config
+    cfg = deepcopy(load_yaml(entry.yaml_path, resolve_func=True))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/_yaml_loader.py", line 185, in load_yaml
+    cfg = yaml.load(fh, Loader=loader_cls)  # noqa: S506
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/yaml/constructor.py", line 51, in get_single_data
+    return self.construct_document(node)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/yaml/constructor.py", line 60, in construct_document
+    for dummy in generator:
+  File "/tmp/benchvenv/lib/python3.12/site-packages/yaml/constructor.py", line 413, in construct_yaml_map
+    value = self.construct_mapping(node)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/yaml/constructor.py", line 218, in construct_mapping
+    return super().construct_mapping(node, deep=deep)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/yaml/constructor.py", line 143, in construct_mapping
+    value = self.construct_object(value_node, deep=deep)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/yaml/constructor.py", line 100, in construct_object
+    data = constructor(self, node)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/_yaml_loader.py", line 22, in ctor
+    return _import_func_in_yml(spec, base_dir)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/_yaml_loader.py", line 109, in _import_func_in_yml
+    module = _load_module_with_cache(rel)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/_yaml_loader.py", line 88, in _load_module_with_cache
+    spec.loader.exec_module(module)  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/ifeval/utils.py", line 4, in <module>
+    from lm_eval.tasks.ifeval import instructions_registry
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/ifeval/instructions_registry.py", line 17, in <module>
+    from lm_eval.tasks.ifeval import instructions
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/ifeval/instructions.py", line 38, in <module>
+    from lm_eval.tasks.ifeval import instructions_util
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/tasks/ifeval/instructions_util.py", line 23, in <module>
+    import immutabledict
+ModuleNotFoundError: No module named 'immutabledict'
+IFEVAL_RC=1
+2026-08-15:11:02:31 WARNING  [config.evaluate_config:287] --limit SHOULD ONLY BE USED FOR TESTING. REAL METRICS SHOULD NOT BE COMPUTED USING LIMIT.
+2026-08-15:11:02:34 INFO     [_cli.run:388] Selected Tasks: ['gpqa_diamond_zeroshot']
+2026-08-15:11:02:34 WARNING  [evaluator:184] pretrained=None appears to be an instruct or chat variant but chat template is not applied. Recommend setting `apply_chat_template`
+        (optionally `fewshot_as_multiturn`).
+2026-08-15:11:02:34 INFO     [evaluator:214] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2026-08-15:11:02:34 WARNING  [evaluator:226] generation_kwargs: {'max_gen_toks': 8192, 'temperature': 0} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+2026-08-15:11:02:34 INFO     [evaluator:239] Initializing local-chat-completions model, with arguments: {'model': 'qwen38-27b-unsloth-nvfp4', 'base_url': 'http://127.0.0.1:8888/v1/chat/completions', 'num_concurrent': 1, 'max_retries': 3, 'tokenized_requests': False}
+2026-08-15:11:02:34 INFO     [models.api_models:179] Using max length 2048 - 1
+2026-08-15:11:02:34 INFO     [models.api_models:182] Concurrent requests are disabled. To enable concurrent requests, set `num_concurrent` > 1.
+2026-08-15:11:02:34 INFO     [models.api_models:200] Using tokenizer None
+Generating train split:   0%|          | 0/198 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 198/198 [00:00<00:00, 5822.93 examples/s]
+Map:   0%|          | 0/198 [00:00<?, ? examples/s]Map: 100%|██████████| 198/198 [00:00<00:00, 3099.20 examples/s]
+2026-08-15:11:03:57 INFO     [evaluator_utils:446] Selected tasks:
+2026-08-15:11:03:57 INFO     [evaluator_utils:480] Task: gpqa_diamond_zeroshot (gpqa/zeroshot/gpqa_diamond_zeroshot.yaml)
+2026-08-15:11:03:57 INFO     [api.task:312] Building contexts for gpqa_diamond_zeroshot on rank 0...
+  0%|          | 0/100 [00:00<?, ?it/s]100%|██████████| 100/100 [00:00<00:00, 4146.82it/s]
+2026-08-15:11:03:57 INFO     [evaluator:585] Running loglikelihood requests
+Traceback (most recent call last):
+  File "/tmp/benchvenv/bin/lm_eval", line 6, in <module>
+    sys.exit(cli_evaluate())
+             ^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/__main__.py", line 10, in cli_evaluate
+    parser.execute(args)
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/_cli/harness.py", line 60, in execute
+    args.func(args)
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/_cli/run.py", line 391, in _execute
+    results = simple_evaluate(
+              ^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/utils.py", line 575, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/evaluator.py", line 358, in simple_evaluate
+    results = evaluate(
+              ^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/utils.py", line 575, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/evaluator.py", line 596, in evaluate
+    resps = getattr(lm, reqtype)(cloned_reqs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/benchvenv/lib/python3.12/site-packages/lm_eval/models/openai_completions.py", line 239, in loglikelihood
+    raise NotImplementedError(
+NotImplementedError: Loglikelihood is not supported for chat completions. Consider using the completions API instead.
+GPQA_RC=1
+HLE_SKIPPED (http 302)
+STAGE2-DONE

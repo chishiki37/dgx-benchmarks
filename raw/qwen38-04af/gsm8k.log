@@ -1,0 +1,73 @@
+Downloading GSM8K test set...
+Loaded 1319 questions, testing first 50
+Endpoint: http://127.0.0.1:8888/v1/chat/completions
+max_tokens=8192, temperature=0.0
+[1/50] OK pred=18 gt=18 finish=stop toks=173 0tok/s (6.6s/q, ETA 325s)
+[2/50] OK pred=3 gt=3 finish=stop toks=117 0tok/s (5.6s/q, ETA 269s)
+[3/50] OK pred=70000 gt=70000 finish=stop toks=954 0tok/s (15.7s/q, ETA 738s)
+[4/50] OK pred=540 gt=540 finish=stop toks=203 0tok/s (13.8s/q, ETA 634s)
+[5/50] OK pred=20 gt=20 finish=stop toks=229 0tok/s (12.8s/q, ETA 577s)
+[6/50] OK pred=64 gt=64 finish=stop toks=308 0tok/s (12.6s/q, ETA 556s)
+[7/50] OK pred=260 gt=260 finish=stop toks=156 0tok/s (11.6s/q, ETA 500s)
+[8/50] OK pred=160 gt=160 finish=stop toks=516 0tok/s (12.8s/q, ETA 537s)
+[9/50] OK pred=45 gt=45 finish=stop toks=724 0tok/s (14.5s/q, ETA 596s)
+[10/50] OK pred=460 gt=460 finish=stop toks=206 0tok/s (13.9s/q, ETA 556s)
+[11/50] OK pred=366 gt=366 finish=stop toks=246 0tok/s (13.5s/q, ETA 526s)
+[12/50] OK pred=694 gt=694 finish=stop toks=221 0tok/s (13.0s/q, ETA 494s)
+[13/50] WRONG pred=12 gt=13 finish=stop toks=1250 0tok/s (16.0s/q, ETA 590s)
+    Response: 
+
+Each year, Carlos earns:
+
+- Lemon sales: \(7 \times 1.5 = 10.5\) dollars
+- Watering/feeding cost: \(3\) dollars
+- Net yearly profit: \(10.5 - 3 = 7.5\) dollars
+
+He needs to recover the initial plant
+[14/50] OK pred=18 gt=18 finish=stop toks=395 0tok/s (15.8s/q, ETA 568s)
+[15/50] OK pred=60 gt=60 finish=stop toks=495 0tok/s (15.9s/q, ETA 557s)
+[16/50] OK pred=125 gt=125 finish=stop toks=366 0tok/s (15.8s/q, ETA 538s)
+[17/50] ERROR: HTTPConnectionPool(host='127.0.0.1', port=8888): Read timed out. (read timeout=300)
+[18/50] OK pred=57500 gt=57500 finish=stop toks=243 0tok/s (31.2s/q, ETA 999s)
+[19/50] OK pred=7 gt=7 finish=stop toks=191 0tok/s (30.0s/q, ETA 929s)
+[20/50] OK pred=6 gt=6 finish=stop toks=346 0tok/s (29.1s/q, ETA 874s)
+[21/50] OK pred=15 gt=15 finish=stop toks=423 0tok/s (28.5s/q, ETA 828s)
+[22/50] OK pred=14 gt=14 finish=stop toks=299 0tok/s (27.7s/q, ETA 777s)
+[23/50] OK pred=7 gt=7 finish=stop toks=140 0tok/s (26.8s/q, ETA 723s)
+[24/50] OK pred=8 gt=8 finish=stop toks=129 0tok/s (25.9s/q, ETA 672s)
+[25/50] OK pred=26.00 gt=26 finish=stop toks=197 0tok/s (25.1s/q, ETA 628s)
+[26/50] OK pred=2 gt=2 finish=stop toks=301 0tok/s (24.6s/q, ETA 590s)
+[27/50] OK pred=243 gt=243 finish=stop toks=254 0tok/s (24.0s/q, ETA 553s)
+[28/50] OK pred=16 gt=16 finish=stop toks=189 0tok/s (23.4s/q, ETA 516s)
+[29/50] OK pred=25 gt=25 finish=stop toks=147 0tok/s (22.8s/q, ETA 479s)
+[30/50] OK pred=104 gt=104 finish=stop toks=260 0tok/s (22.4s/q, ETA 448s)
+[31/50] OK pred=109 gt=109 finish=stop toks=209 0tok/s (21.9s/q, ETA 416s)
+[32/50] OK pred=80 gt=80 finish=stop toks=299 0tok/s (21.6s/q, ETA 388s)
+[33/50] OK pred=35 gt=35 finish=stop toks=147 0tok/s (21.1s/q, ETA 358s)
+[34/50] OK pred=70 gt=70 finish=stop toks=221 0tok/s (20.7s/q, ETA 331s)
+[35/50] OK pred=23 gt=23 finish=stop toks=171 0tok/s (20.3s/q, ETA 304s)
+[36/50] OK pred=9 gt=9 finish=stop toks=210 0tok/s (19.9s/q, ETA 279s)
+[37/50] OK pred=75 gt=75 finish=stop toks=241 0tok/s (19.6s/q, ETA 255s)
+[38/50] OK pred=2 gt=2 finish=stop toks=647 0tok/s (19.8s/q, ETA 237s)
+[39/50] OK pred=10 gt=10 finish=stop toks=451 0tok/s (19.7s/q, ETA 217s)
+[40/50] OK pred=18 gt=18 finish=stop toks=474 0tok/s (19.7s/q, ETA 197s)
+[41/50] OK pred=8 gt=8 finish=stop toks=344 0tok/s (19.5s/q, ETA 176s)
+[42/50] OK pred=200 gt=200 finish=stop toks=1041 0tok/s (20.1s/q, ETA 160s)
+[43/50] OK pred=26 gt=26 finish=stop toks=154 0tok/s (19.7s/q, ETA 138s)
+[44/50] OK pred=48 gt=48 finish=stop toks=247 0tok/s (19.5s/q, ETA 117s)
+[45/50] OK pred=20 gt=20 finish=stop toks=365 0tok/s (19.4s/q, ETA 97s)
+[46/50] OK pred=104 gt=104 finish=stop toks=690 0tok/s (19.6s/q, ETA 78s)
+[47/50] OK pred=163 gt=163 finish=stop toks=316 0tok/s (19.4s/q, ETA 58s)
+[48/50] OK pred=800 gt=800 finish=stop toks=367 0tok/s (19.2s/q, ETA 38s)
+[49/50] OK pred=8 gt=8 finish=stop toks=104 0tok/s (18.9s/q, ETA 19s)
+[50/50] OK pred=30 gt=30 finish=stop toks=146 0tok/s (18.7s/q, ETA 0s)
+
+==================================================
+GSM8K Results (N=50)
+  Accuracy: 96.0% (48/50)
+  Errors: 1
+  Time: 933s (18.7s/question)
+
+  Failures (1):
+    Q13: pred=12 gt=13 [REASONING] (1250 tokens, finish=stop)
+Saved to /tmp/qbench/gsm8k_vllm_k3.json
