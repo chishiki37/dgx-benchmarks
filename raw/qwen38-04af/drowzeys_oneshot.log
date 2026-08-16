@@ -1,0 +1,30 @@
+
+[1;36m==> 0/5 preflight[0m
+  GPU: NVIDIA GB10
+
+[1;36m==> 1/5 pull runtime image (pinned; official vLLM 0.27 lacks sm_121a — this build has it)[0m
+  image present
+
+[1;36m==> 2/5 fetch unsloth/Qwen3.8-27B-NVFP4 -> /home/vikassridhar/models-local-qwen38/Qwen3.8-27B-NVFP4[0m
+  model present
+
+[1;36m==> 3/5 launch serve (profile: throughput)[0m
+  Profile A: c=8.8 @ 256K, native quality
+
+[1;36m==> 4/5 wait for serve health (first run compiles FP4 kernels; up to ~12 min)[0m
+  healthy
+
+[1;36m==> 5/5 smoke test + first-load warmup (large prefill)[0m
+  (EngineCore pid=385) INFO 08-16 00:39:15 [llm_base_proposer.py:1639] Detected MTP model. Sharing target model lm_head weights with the draft model.
+  (EngineCore pid=385) INFO 08-16 00:42:04 [kv_cache_utils.py:2437] GPU KV cache size: 2,281,844 tokens
+  (EngineCore pid=385) INFO 08-16 00:42:04 [kv_cache_utils.py:2438] Maximum concurrency for 262,144 tokens per request: 8.70x
+  model replied: READY  (large-prefill path now warm)
+
+\033[1;32m✅ DONE.\033[0m  Qwen3.8-27B-NVFP4 + MTP-3 serving on:
+    http://localhost:8078/v1   (model id: qwen38-nvfp4)
+
+  Test:   curl http://localhost:8078/v1/chat/completions -H 'Content-Type: application/json' \
+            -d '{"model":"qwen38-nvfp4","messages":[{"role":"user","content":"hi"}]}'
+  Bench:  bash bench/run_bench.sh http://localhost:8078
+  Logs:   docker logs -f qwen38
+  Stop:   docker rm -f qwen38

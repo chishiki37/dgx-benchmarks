@@ -1,0 +1,102 @@
+HLE: 2500 total, 2158 text-only, using 100, concurrency 4
+[1/100] BAD gt='18' finish=stop toks=3 acc=0.000 ETA 0.9m
+[2/100] BAD gt='Z+Z+Z+Z+Z' finish=stop toks=2 acc=0.000 ETA 0.5m
+[3/100] BAD gt='yeyo' finish=stop toks=4 acc=0.000 ETA 0.6m
+[4/100] BAD gt='D' finish=stop toks=8 acc=0.000 ETA 0.4m
+[5/100] BAD gt='3' finish=stop toks=2 acc=0.000 ETA 0.6m
+[6/100] BAD gt='\\(-((d - 2k)^2) + d\\)' finish=stop toks=12 acc=0.000 ETA 0.5m
+[7/100] BAD gt='$1 + 3x + 6x^2 + 8x^3 + 6x^4 + 3x^5 + x^6$' finish=stop toks=18 acc=0.000 ETA 0.4m
+[8/100] BAD gt='E' finish=stop toks=2 acc=0.000 ETA 0.5m
+[9/100] OK  gt='\\mathbb{Z}' finish=stop toks=14 acc=0.111 ETA 0.5m
+[10/100] BAD gt='$\\mathcal{A}^{\\alpha-}(X)$, denoting $\\cap_{\\delta>0} \\mathcal{A}^{\\alpha-\\delta}(X)$' finish=stop toks=14 acc=0.100 ETA 0.4m
+[11/100] BAD gt='Katie kicked the knotted kite string, knowing it would take skill to unknot the tangled mess.' finish=stop toks=31 acc=0.091 ETA 0.5m
+[12/100] BAD gt='Sale Law' finish=stop toks=3 acc=0.083 ETA 0.4m
+[13/100] BAD gt='C' finish=stop toks=2 acc=0.077 ETA 0.4m
+[14/100] BAD gt='B' finish=stop toks=2 acc=0.071 ETA 0.4m
+[15/100] BAD gt='Shuriken' finish=stop toks=4 acc=0.067 ETA 0.4m
+[16/100] BAD gt='D+1' finish=stop toks=2 acc=0.062 ETA 0.4m
+[17/100] OK  gt='C' finish=stop toks=14 acc=0.118 ETA 0.4m
+[18/100] BAD gt='Yes' finish=stop toks=2 acc=0.111 ETA 0.4m
+[19/100] BAD gt='No, the regular subgradient may be empty.' finish=stop toks=2 acc=0.105 ETA 0.4m
+[20/100] BAD gt='Yes' finish=stop toks=9 acc=0.100 ETA 0.4m
+[21/100] BAD gt='\\frac{2}{7}' finish=stop toks=2 acc=0.095 ETA 0.4m
+[22/100] OK  gt='False' finish=stop toks=2 acc=0.136 ETA 0.3m
+[23/100] BAD gt='\\begin{pmatrix}8&9\\\\9&8\\end{pmatrix}' finish=stop toks=26 acc=0.130 ETA 0.3m
+[24/100] OK  gt='1' finish=stop toks=2 acc=0.167 ETA 0.3m
+[25/100] BAD gt='56' finish=stop toks=2 acc=0.160 ETA 0.3m
+[26/100] BAD gt='F' finish=stop toks=2 acc=0.154 ETA 0.3m
+[27/100] BAD gt='1430' finish=stop toks=2 acc=0.148 ETA 0.3m
+[28/100] BAD gt='min(max(0, T - z), z)' finish=stop toks=2 acc=0.143 ETA 0.3m
+[29/100] BAD gt='(1,4,5), (1,3,4,5,6)' finish=stop toks=11 acc=0.138 ETA 0.3m
+[30/100] BAD gt='J' finish=stop toks=2 acc=0.133 ETA 0.3m
+[31/100] BAD gt='6' finish=stop toks=2 acc=0.129 ETA 0.3m
+[32/100] BAD gt='C' finish=stop toks=2 acc=0.125 ETA 0.3m
+[33/100] BAD gt='1/1451520' finish=stop toks=7 acc=0.121 ETA 0.3m
+[34/100] BAD gt='J4s' finish=stop toks=4 acc=0.118 ETA 0.3m
+[35/100] BAD gt='B' finish=stop toks=5 acc=0.114 ETA 0.3m
+[36/100] BAD gt='8' finish=stop toks=2 acc=0.111 ETA 0.3m
+[37/100] BAD gt='D' finish=stop toks=2 acc=0.108 ETA 0.3m
+[38/100] OK  gt='B' finish=stop toks=2 acc=0.132 ETA 0.3m
+[39/100] BAD gt='$-m^2/2$' finish=stop toks=6 acc=0.128 ETA 0.3m
+[40/100] BAD gt='5.7' finish=stop toks=4 acc=0.125 ETA 0.3m
+[41/100] BAD gt='46.24' finish=stop toks=6 acc=0.122 ETA 0.3m
+[42/100] OK  gt='C' finish=stop toks=4 acc=0.143 ETA 0.3m
+[43/100] BAD gt='-0.5' finish=stop toks=2 acc=0.140 ETA 0.3m
+[44/100] BAD gt='H' finish=stop toks=2 acc=0.136 ETA 0.3m
+[45/100] BAD gt='flag{no_zeros}' finish=stop toks=10 acc=0.133 ETA 0.3m
+[46/100] BAD gt='C' finish=stop toks=5 acc=0.130 ETA 0.3m
+[47/100] BAD gt='5429515560378' finish=stop toks=6 acc=0.128 ETA 0.3m
+[48/100] OK  gt='D' finish=stop toks=5 acc=0.146 ETA 0.3m
+[49/100] BAD gt='G' finish=stop toks=9 acc=0.143 ETA 0.3m
+[50/100] BAD gt='A' finish=stop toks=6 acc=0.140 ETA 0.3m
+[51/100] BAD gt='(6, 14, 15, 7)' finish=stop toks=15 acc=0.137 ETA 0.2m
+[52/100] BAD gt='0' finish=stop toks=4 acc=0.135 ETA 0.2m
+[53/100] BAD gt='TC⁰' finish=stop toks=2 acc=0.132 ETA 0.2m
+[54/100] BAD gt='hereth' finish=stop toks=4 acc=0.130 ETA 0.2m
+[55/100] BAD gt='48' finish=stop toks=2 acc=0.127 ETA 0.2m
+[56/100] BAD gt='C' finish=stop toks=2 acc=0.125 ETA 0.2m
+[57/100] BAD gt='F' finish=stop toks=6 acc=0.123 ETA 0.2m
+[58/100] BAD gt='$2\\mathbb{Z}$' finish=stop toks=9 acc=0.121 ETA 0.2m
+[59/100] BAD gt='F(U_i, U_j, U_{ij})' finish=stop toks=8 acc=0.119 ETA 0.2m
+[60/100] BAD gt='2, 47176870 steps' finish=stop toks=9 acc=0.117 ETA 0.2m
+[61/100] BAD gt='California' finish=stop toks=4 acc=0.115 ETA 0.2m
+[62/100] BAD gt='Saint Sebastian' finish=stop toks=7 acc=0.113 ETA 0.2m
+[63/100] BAD gt='236(2),236(3),236(3A)' finish=stop toks=16 acc=0.111 ETA 0.2m
+[64/100] OK  gt='D' finish=stop toks=6 acc=0.125 ETA 0.2m
+[65/100] BAD gt='C' finish=stop toks=2 acc=0.123 ETA 0.2m
+[66/100] BAD gt='4' finish=stop toks=2 acc=0.121 ETA 0.2m
+[67/100] BAD gt='B' finish=stop toks=2 acc=0.119 ETA 0.2m
+[68/100] BAD gt='4' finish=stop toks=2 acc=0.118 ETA 0.2m
+[69/100] BAD gt='K' finish=stop toks=2 acc=0.116 ETA 0.1m
+[70/100] BAD gt='Benin and Madagascar' finish=stop toks=2 acc=0.114 ETA 0.1m
+[71/100] BAD gt='7' finish=stop toks=3 acc=0.113 ETA 0.1m
+[72/100] BAD gt='4' finish=stop toks=2 acc=0.111 ETA 0.1m
+[73/100] BAD gt='352311' finish=stop toks=7 acc=0.110 ETA 0.1m
+[74/100] OK  gt='1' finish=stop toks=2 acc=0.122 ETA 0.1m
+[75/100] BAD gt='4' finish=stop toks=2 acc=0.120 ETA 0.1m
+[76/100] BAD gt='\\left(N_1N_2 \\over n\\right)' finish=stop toks=22 acc=0.118 ETA 0.1m
+[77/100] OK  gt='No' finish=stop toks=2 acc=0.130 ETA 0.1m
+[78/100] BAD gt='8' finish=stop toks=2 acc=0.128 ETA 0.1m
+[79/100] BAD gt='E' finish=stop toks=2 acc=0.127 ETA 0.1m
+[80/100] BAD gt='F' finish=stop toks=12 acc=0.125 ETA 0.1m
+[81/100] BAD gt='C' finish=stop toks=2 acc=0.123 ETA 0.1m
+[82/100] BAD gt='I' finish=stop toks=2 acc=0.122 ETA 0.1m
+[83/100] BAD gt='684' finish=stop toks=4 acc=0.120 ETA 0.1m
+[84/100] BAD gt='kənʃə' finish=stop toks=5 acc=0.119 ETA 0.1m
+[85/100] BAD gt='6' finish=stop toks=2 acc=0.118 ETA 0.1m
+[86/100] BAD gt='(N+1)\\left\\lceil \\frac{\\pi}{2\\arcsin \\left( \\frac{1}{2t} \\right)} \\right\\rceil' finish=stop toks=4 acc=0.116 ETA 0.1m
+[87/100] BAD gt='8' finish=stop toks=2 acc=0.115 ETA 0.1m
+[88/100] OK  gt='D' finish=stop toks=7 acc=0.125 ETA 0.1m
+[89/100] BAD gt='Chromatic Scale' finish=stop toks=3 acc=0.124 ETA 0.1m
+[90/100] BAD gt='F5 G♭5 G5 F5 G5 F5 E♭5 F5 G5 C5 F5' finish=stop toks=25 acc=0.122 ETA 0.1m
+[91/100] BAD gt='Db5 D5 Eb5 E5 F5 Gb5 Db6 Db6 B5 Ab5' finish=stop toks=15 acc=0.121 ETA 0.0m
+[92/100] BAD gt='29010' finish=stop toks=2 acc=0.120 ETA 0.0m
+[93/100] BAD gt='$\\frac{3}{10}$' finish=stop toks=2 acc=0.118 ETA 0.0m
+[94/100] BAD gt='Virgil Elings' finish=stop toks=5 acc=0.117 ETA 0.0m
+[95/100] BAD gt='624' finish=stop toks=2 acc=0.116 ETA 0.0m
+[96/100] BAD gt='Canals on Mars' finish=stop toks=6 acc=0.115 ETA 0.0m
+[97/100] BAD gt='A dodecagon' finish=stop toks=5 acc=0.113 ETA 0.0m
+[98/100] BAD gt='8' finish=stop toks=2 acc=0.112 ETA 0.0m
+[99/100] BAD gt='1.776 * 10^-3 ' finish=stop toks=12 acc=0.111 ETA 0.0m
+[100/100] BAD gt='\\frac{1-1/(\\pi+1)}{\\log(\\pi+1)}' finish=length toks=2048 acc=0.110 ETA 0.0m
+{"benchmark": "HLE-text", "n": 100, "correct": 11, "accuracy": 0.11, "model": "qwen38-27b-unsloth-nvfp4", "total_time_s": 86.2, "mode": "thinking-off, direct-answer, exact-match"}

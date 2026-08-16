@@ -1,0 +1,364 @@
+stage8 start 2026-08-16T07:36:04+07:00
+oneshot gate passed after 515s
+server up after 5s
+=== WARMUP ===
+{"id":"chatcmpl-8f17c1145379ea26","object":"chat.completion","created":1786841075,"model":"qwen38-nvfp4","choices":[{"index":0,"message":{"role":"assistant","content":"\n\nThe sea stretches endlessly under the sky.","refusal":null,"annotations":null,"audio":null,"function_call":null,"reasoning":"We 
+warmup done
+=== GSM8K ===
+Downloading GSM8K test set...
+Loaded 1319 questions, testing first 50
+Endpoint: http://127.0.0.1:8078/v1/chat/completions
+max_tokens=4096, temperature=0.0
+[1/50] OK pred=18 gt=18 finish=stop toks=188 0tok/s (7.4s/q, ETA 363s)
+[2/50] OK pred=3 gt=3 finish=stop toks=79 0tok/s (5.4s/q, ETA 259s)
+[3/50] OK pred=70000 gt=70000 finish=stop toks=1240 0tok/s (19.3s/q, ETA 906s)
+[4/50] OK pred=540 gt=540 finish=stop toks=163 0tok/s (16.2s/q, ETA 746s)
+[5/50] OK pred=20 gt=20 finish=stop toks=200 0tok/s (14.5s/q, ETA 654s)
+[6/50] OK pred=64 gt=64 finish=stop toks=318 0tok/s (14.2s/q, ETA 623s)
+[7/50] OK pred=260 gt=260 finish=stop toks=166 0tok/s (13.1s/q, ETA 563s)
+[8/50] OK pred=160 gt=160 finish=stop toks=488 0tok/s (13.8s/q, ETA 578s)
+[9/50] OK pred=45 gt=45 finish=stop toks=532 0tok/s (14.5s/q, ETA 594s)
+[10/50] OK pred=460 gt=460 finish=stop toks=225 0tok/s (14.0s/q, ETA 559s)
+[11/50] OK pred=366 gt=366 finish=stop toks=231 0tok/s (13.5s/q, ETA 526s)
+[12/50] OK pred=694 gt=694 finish=stop toks=177 0tok/s (12.9s/q, ETA 489s)
+[13/50] WRONG pred=12 gt=13 finish=stop toks=1071 0tok/s (15.4s/q, ETA 570s)
+    Response: 
+
+The tree costs $90 to plant.
+
+Each year, Carlos earns:
+
+\[
+7 \times 1.5 = 10.5
+\]
+
+Each year, he spends $3 on water and feed, so his yearly profit is:
+
+\[
+10.5 - 3 = 7.5
+\]
+
+To recover the $90 plant
+[14/50] OK pred=18 gt=18 finish=stop toks=429 0tok/s (15.4s/q, ETA 556s)
+[15/50] WRONG pred=40 gt=60 finish=stop toks=204 0tok/s (14.9s/q, ETA 523s)
+    Response: 
+
+There are 20 students total.
+
+1. Contemporary dance:  
+20% of 20 = 4 students.
+
+2. Remaining students:  
+20 − 4 = 16 students.
+
+3. Jazz dance:  
+25% of 16 = 4 students.
+
+4. Hip-hop dance:  
+16 − 4 =
+[16/50] OK pred=125 gt=125 finish=stop toks=226 0tok/s (14.5s/q, ETA 495s)
+[17/50] OK pred=230 gt=230 finish=stop toks=3271 0tok/s (21.7s/q, ETA 717s)
+[18/50] OK pred=57500 gt=57500 finish=stop toks=337 0tok/s (21.3s/q, ETA 680s)
+[19/50] OK pred=7 gt=7 finish=stop toks=176 0tok/s (20.5s/q, ETA 636s)
+[20/50] OK pred=6 gt=6 finish=stop toks=324 0tok/s (20.1s/q, ETA 603s)
+[21/50] OK pred=15 gt=15 finish=stop toks=689 0tok/s (20.4s/q, ETA 592s)
+[22/50] OK pred=14 gt=14 finish=stop toks=234 0tok/s (19.9s/q, ETA 558s)
+[23/50] OK pred=7 gt=7 finish=stop toks=191 0tok/s (19.4s/q, ETA 524s)
+[24/50] OK pred=8 gt=8 finish=stop toks=104 0tok/s (18.8s/q, ETA 488s)
+[25/50] OK pred=26.00 gt=26 finish=stop toks=211 0tok/s (18.3s/q, ETA 458s)
+[26/50] OK pred=2 gt=2 finish=stop toks=241 0tok/s (18.0s/q, ETA 431s)
+[27/50] OK pred=243 gt=243 finish=stop toks=271 0tok/s (17.7s/q, ETA 407s)
+[28/50] OK pred=16 gt=16 finish=stop toks=229 0tok/s (17.4s/q, ETA 383s)
+[29/50] OK pred=25 gt=25 finish=stop toks=149 0tok/s (17.0s/q, ETA 357s)
+[30/50] OK pred=104 gt=104 finish=stop toks=260 0tok/s (16.7s/q, ETA 335s)
+[31/50] OK pred=109 gt=109 finish=stop toks=236 0tok/s (16.5s/q, ETA 313s)
+[32/50] OK pred=80 gt=80 finish=stop toks=299 0tok/s (16.3s/q, ETA 294s)
+[33/50] OK pred=35 gt=35 finish=stop toks=152 0tok/s (16.0s/q, ETA 272s)
+[34/50] OK pred=70 gt=70 finish=stop toks=239 0tok/s (15.8s/q, ETA 252s)
+[35/50] OK pred=23 gt=23 finish=stop toks=182 0tok/s (15.5s/q, ETA 233s)
+[36/50] OK pred=9 gt=9 finish=stop toks=187 0tok/s (15.3s/q, ETA 214s)
+[37/50] OK pred=75 gt=75 finish=stop toks=212 0tok/s (15.1s/q, ETA 196s)
+[38/50] OK pred=2 gt=2 finish=stop toks=789 0tok/s (15.5s/q, ETA 186s)
+[39/50] OK pred=10 gt=10 finish=stop toks=314 0tok/s (15.4s/q, ETA 170s)
+[40/50] OK pred=18 gt=18 finish=stop toks=562 0tok/s (15.6s/q, ETA 156s)
+[41/50] OK pred=8 gt=8 finish=stop toks=1554 0tok/s (16.9s/q, ETA 152s)
+[42/50] OK pred=200 gt=200 finish=stop toks=407 0tok/s (16.9s/q, ETA 135s)
+[43/50] OK pred=26 gt=26 finish=stop toks=137 0tok/s (16.6s/q, ETA 116s)
+[44/50] OK pred=48 gt=48 finish=stop toks=245 0tok/s (16.4s/q, ETA 99s)
+[45/50] OK pred=20 gt=20 finish=stop toks=282 0tok/s (16.3s/q, ETA 82s)
+[46/50] WRONG pred=44 gt=104 finish=stop toks=3495 0tok/s (19.3s/q, ETA 77s)
+    Response: 
+
+Monday: 5 articles  
+Tuesday: \(5 \times \frac{2}{5} = 2\) articles  
+Wednesday: \(2 \times 2 = 4\) articles  
+
+Total articles: \(5 + 2 + 4 = 11\)  
+Total hours: \(11 \times 4 = 44\)
+
+#### 44
+[47/50] OK pred=163 gt=163 finish=stop toks=330 0tok/s (19.1s/q, ETA 57s)
+[48/50] OK pred=800 gt=800 finish=stop toks=350 0tok/s (19.0s/q, ETA 38s)
+[49/50] OK pred=8 gt=8 finish=stop toks=120 0tok/s (18.7s/q, ETA 19s)
+[50/50] OK pred=30 gt=30 finish=stop toks=163 0tok/s (18.5s/q, ETA 0s)
+
+==================================================
+GSM8K Results (N=50)
+  Accuracy: 94.0% (47/50)
+  Errors: 0
+  Time: 923s (18.5s/question)
+
+  Failures (3):
+    Q13: pred=12 gt=13 [REASONING] (1071 tokens, finish=stop)
+    Q15: pred=40 gt=60 [REASONING] (204 tokens, finish=stop)
+    Q46: pred=44 gt=104 [REASONING] (3495 tokens, finish=stop)
+Saved to /tmp/qbench/gsm8k_drowzeys_mtp3.json
+GSM8K_RC=0
+=== HUMANEVAL ===
+Loaded 50 HumanEval problems
+  [1/50] PASS HumanEval/0 (stop)
+  [2/50] PASS HumanEval/1 (stop)
+  [3/50] PASS HumanEval/2 (stop)
+  [4/50] PASS HumanEval/3 (stop)
+  [5/50] PASS HumanEval/4 (stop)
+  [6/50] PASS HumanEval/5 (stop)
+  [7/50] PASS HumanEval/6 (stop)
+  [8/50] PASS HumanEval/7 (stop)
+  [9/50] PASS HumanEval/8 (stop)
+  [10/50] PASS HumanEval/9 (stop)
+  [11/50] BUG HumanEval/10 (error)
+  [12/50] PASS HumanEval/11 (stop)
+  [13/50] PASS HumanEval/12 (stop)
+  [14/50] PASS HumanEval/13 (stop)
+  [15/50] PASS HumanEval/14 (stop)
+  [16/50] PASS HumanEval/15 (stop)
+  [17/50] PASS HumanEval/16 (stop)
+  [18/50] PASS HumanEval/17 (stop)
+  [19/50] PASS HumanEval/18 (stop)
+  [20/50] PASS HumanEval/19 (stop)
+  [21/50] PASS HumanEval/20 (stop)
+  [22/50] PASS HumanEval/21 (stop)
+  [23/50] PASS HumanEval/22 (stop)
+  [24/50] PASS HumanEval/23 (stop)
+  [25/50] PASS HumanEval/24 (stop)
+  [26/50] PASS HumanEval/25 (stop)
+  [27/50] PASS HumanEval/26 (stop)
+  [28/50] PASS HumanEval/27 (stop)
+  [29/50] PASS HumanEval/28 (stop)
+  [30/50] PASS HumanEval/29 (stop)
+  [31/50] PASS HumanEval/30 (stop)
+  [32/50] PASS HumanEval/31 (stop)
+  [33/50] BUG HumanEval/32 (error)
+  [34/50] PASS HumanEval/33 (stop)
+  [35/50] PASS HumanEval/34 (stop)
+  [36/50] PASS HumanEval/35 (stop)
+  [37/50] PASS HumanEval/36 (stop)
+  [38/50] PASS HumanEval/37 (stop)
+  [39/50] BUG HumanEval/38 (stop)
+  [40/50] PASS HumanEval/39 (stop)
+  [41/50] PASS HumanEval/40 (stop)
+  [42/50] PASS HumanEval/41 (stop)
+  [43/50] PASS HumanEval/42 (stop)
+  [44/50] PASS HumanEval/43 (stop)
+  [45/50] PASS HumanEval/44 (stop)
+  [46/50] PASS HumanEval/45 (stop)
+  [47/50] PASS HumanEval/46 (stop)
+  [48/50] BUG HumanEval/47 (error)
+  [49/50] PASS HumanEval/48 (stop)
+  [50/50] PASS HumanEval/49 (stop)
+
+==================================================
+  HumanEval(chat): 46/50 pass@1 (92.0%)
+==================================================
+Saved to /tmp/qbench/humaneval_drowzeys_mtp3.json
+HUMANEVAL_RC=0
+=== IFEVAL ===
+2026-08-16:08:37:22 WARNING  [config.evaluate_config:287] --limit SHOULD ONLY BE USED FOR TESTING. REAL METRICS SHOULD NOT BE COMPUTED USING LIMIT.
+2026-08-16:08:37:22 INFO     [config.evaluate_config:307] Using default fewshot_as_multiturn=True.
+2026-08-16:08:37:28 INFO     [_cli.run:388] Selected Tasks: ['ifeval']
+2026-08-16:08:37:28 INFO     [evaluator:214] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2026-08-16:08:37:28 WARNING  [evaluator:226] generation_kwargs: {'temperature': 0, 'max_tokens': 4096} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+2026-08-16:08:37:28 INFO     [evaluator:239] Initializing local-chat-completions model, with arguments: {'model': 'qwen38-nvfp4', 'base_url': 'http://127.0.0.1:8078/v1/chat/completions', 'tokenizer': 'unsloth/Qwen3.8-27B-NVFP4', 'num_concurrent': 8, 'max_retries': 3, 'tokenized_requests': False}
+2026-08-16:08:37:28 INFO     [models.api_models:179] Using max length 2048 - 1
+2026-08-16:08:37:28 INFO     [models.api_models:200] Using tokenizer None
+2026-08-16:08:38:53 INFO     [evaluator_utils:446] Selected tasks:
+2026-08-16:08:38:53 INFO     [evaluator_utils:480] Task: ifeval (ifeval/ifeval.yaml)
+2026-08-16:08:38:53 INFO     [evaluator:314] ifeval: Using gen_kwargs: {'until': [], 'do_sample': False, 'temperature': 0, 'max_gen_toks': 1280, 'max_tokens': 4096}
+2026-08-16:08:38:53 INFO     [api.task:312] Building contexts for ifeval on rank 0...
+  0%|          | 0/100 [00:00<?, ?it/s]100%|██████████| 100/100 [00:00<00:00, 98227.26it/s]
+2026-08-16:08:38:53 INFO     [evaluator:585] Running generate_until requests
+2026-08-16:08:38:53 INFO     [models.api_models:747] Tokenized requests are disabled. Context + generation length is not checked.
+Requesting API:   0%|          | 0/100 [00:00<?, ?it/s]Requesting API:   1%|          | 1/100 [00:11<19:00, 11.52s/it]Requesting API:   2%|▏         | 2/100 [00:19<14:56,  9.15s/it]Requesting API:   3%|▎         | 3/100 [00:22<10:35,  6.55s/it]Requesting API:   4%|▍         | 4/100 [00:23<07:18,  4.56s/it]Requesting API:   5%|▌         | 5/100 [00:28<07:06,  4.49s/it]Requesting API:   6%|▌         | 6/100 [00:29<05:22,  3.43s/it]Requesting API:   7%|▋         | 7/100 [00:44<11:19,  7.30s/it]Requesting API:   8%|▊         | 8/100 [00:47<08:48,  5.75s/it]Requesting API:   9%|▉         | 9/100 [00:48<06:25,  4.24s/it]Requesting API:  10%|█         | 10/100 [00:55<07:44,  5.16s/it]Requesting API:  11%|█         | 11/100 [01:11<12:43,  8.58s/it]Requesting API:  12%|█▏        | 12/100 [01:34<18:45, 12.79s/it]Requesting API:  13%|█▎        | 13/100 [01:36<13:55,  9.61s/it]Requesting API:  14%|█▍        | 14/100 [01:41<11:46,  8.21s/it]Requesting API:  15%|█▌        | 15/100 [01:51<12:19,  8.70s/it]Requesting API:  16%|█▌        | 16/100 [01:58<11:42,  8.36s/it]Requesting API:  17%|█▋        | 17/100 [02:01<09:02,  6.54s/it]Requesting API:  18%|█▊        | 18/100 [02:03<07:18,  5.35s/it]Requesting API:  19%|█▉        | 19/100 [02:21<12:10,  9.02s/it]Requesting API:  20%|██        | 20/100 [02:39<15:32, 11.65s/it]Requesting API:  21%|██        | 21/100 [02:42<12:03,  9.16s/it]Requesting API:  22%|██▏       | 22/100 [02:42<08:28,  6.51s/it]Requesting API:  23%|██▎       | 23/100 [02:50<08:35,  6.69s/it]Requesting API:  24%|██▍       | 24/100 [02:52<06:58,  5.50s/it]Requesting API:  25%|██▌       | 25/100 [03:04<09:12,  7.37s/it]Requesting API:  26%|██▌       | 26/100 [03:19<11:47,  9.56s/it]Requesting API:  27%|██▋       | 27/100 [03:19<08:11,  6.74s/it]2026-08-16:08:42:15 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  28%|██▊       | 28/100 [03:22<06:39,  5.55s/it]2026-08-16:08:42:20 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  29%|██▉       | 29/100 [03:27<06:32,  5.52s/it]Requesting API:  30%|███       | 30/100 [03:32<06:08,  5.26s/it]Requesting API:  31%|███       | 31/100 [03:42<07:48,  6.79s/it]Requesting API:  32%|███▏      | 32/100 [03:56<10:17,  9.08s/it]Requesting API:  33%|███▎      | 33/100 [04:07<10:30,  9.41s/it]Requesting API:  34%|███▍      | 34/100 [04:10<08:20,  7.59s/it]Requesting API:  35%|███▌      | 35/100 [04:10<05:48,  5.36s/it]Requesting API:  36%|███▌      | 36/100 [04:29<09:56,  9.31s/it]Requesting API:  37%|███▋      | 37/100 [04:30<07:08,  6.80s/it]Requesting API:  38%|███▊      | 38/100 [04:44<09:18,  9.01s/it]Requesting API:  39%|███▉      | 39/100 [04:53<09:21,  9.20s/it]Requesting API:  40%|████      | 40/100 [04:56<07:12,  7.22s/it]Requesting API:  41%|████      | 41/100 [05:00<06:02,  6.15s/it]Requesting API:  42%|████▏     | 42/100 [05:08<06:39,  6.89s/it]2026-08-16:08:44:09 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  43%|████▎     | 43/100 [05:16<06:49,  7.19s/it]Requesting API:  44%|████▍     | 44/100 [05:30<08:30,  9.11s/it]Requesting API:  45%|████▌     | 45/100 [05:34<07:08,  7.78s/it]Requesting API:  46%|████▌     | 46/100 [05:42<07:01,  7.81s/it]Requesting API:  47%|████▋     | 47/100 [05:57<08:41,  9.85s/it]Requesting API:  48%|████▊     | 48/100 [05:58<06:08,  7.08s/it]2026-08-16:08:45:15 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  49%|████▉     | 49/100 [06:22<10:27, 12.30s/it]Requesting API:  50%|█████     | 50/100 [06:54<15:16, 18.33s/it]2026-08-16:08:46:13 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  51%|█████     | 51/100 [07:20<16:45, 20.51s/it]Requesting API:  52%|█████▏    | 52/100 [07:23<12:08, 15.19s/it]Requesting API:  53%|█████▎    | 53/100 [07:33<10:45, 13.72s/it]Requesting API:  54%|█████▍    | 54/100 [07:50<11:09, 14.56s/it]2026-08-16:08:47:01 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  55%|█████▌    | 55/100 [08:08<11:42, 15.61s/it]Requesting API:  56%|█████▌    | 56/100 [08:20<10:42, 14.61s/it]Requesting API:  57%|█████▋    | 57/100 [08:21<07:37, 10.64s/it]2026-08-16:08:47:15 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  58%|█████▊    | 58/100 [08:22<05:17,  7.55s/it]Requesting API:  59%|█████▉    | 59/100 [08:42<07:45, 11.35s/it]Requesting API:  60%|██████    | 60/100 [09:18<12:32, 18.80s/it]Requesting API:  61%|██████    | 61/100 [09:21<09:01, 13.90s/it]Requesting API:  62%|██████▏   | 62/100 [09:28<07:29, 11.83s/it]Requesting API:  63%|██████▎   | 63/100 [09:33<06:11, 10.05s/it]Requesting API:  64%|██████▍   | 64/100 [09:34<04:20,  7.23s/it]2026-08-16:08:48:33 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  65%|██████▌   | 65/100 [09:40<03:59,  6.85s/it]Requesting API:  66%|██████▌   | 66/100 [09:52<04:44,  8.38s/it]Requesting API:  67%|██████▋   | 67/100 [09:53<03:25,  6.23s/it]Requesting API:  68%|██████▊   | 68/100 [10:06<04:25,  8.30s/it]Requesting API:  69%|██████▉   | 69/100 [10:24<05:45, 11.13s/it]2026-08-16:08:49:20 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  70%|███████   | 70/100 [10:27<04:15,  8.53s/it]Requesting API:  71%|███████   | 71/100 [10:27<02:55,  6.07s/it]Requesting API:  72%|███████▏  | 72/100 [10:36<03:14,  6.95s/it]Requesting API:  73%|███████▎  | 73/100 [10:47<03:42,  8.23s/it]2026-08-16:08:49:44 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  74%|███████▍  | 74/100 [10:51<03:00,  6.94s/it]Requesting API:  75%|███████▌  | 75/100 [10:51<02:02,  4.90s/it]Requesting API:  76%|███████▌  | 76/100 [11:09<03:27,  8.67s/it]Requesting API:  77%|███████▋  | 77/100 [11:09<02:22,  6.21s/it]Requesting API:  78%|███████▊  | 78/100 [11:13<01:58,  5.39s/it]Requesting API:  79%|███████▉  | 79/100 [11:47<04:59, 14.25s/it]Requesting API:  81%|████████  | 81/100 [11:58<03:10, 10.04s/it]Requesting API:  82%|████████▏ | 82/100 [12:03<02:38,  8.79s/it]Requesting API:  83%|████████▎ | 83/100 [12:06<02:05,  7.37s/it]Requesting API:  84%|████████▍ | 84/100 [12:13<01:56,  7.25s/it]Requesting API:  85%|████████▌ | 85/100 [12:37<02:59, 11.98s/it]Requesting API:  86%|████████▌ | 86/100 [12:40<02:10,  9.34s/it]Requesting API:  87%|████████▋ | 87/100 [12:56<02:28, 11.41s/it]Requesting API:  88%|████████▊ | 88/100 [13:07<02:12, 11.08s/it]Requesting API:  89%|████████▉ | 89/100 [13:09<01:32,  8.44s/it]2026-08-16:08:52:06 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API:  90%|█████████ | 90/100 [13:13<01:12,  7.24s/it]Requesting API:  91%|█████████ | 91/100 [13:28<01:26,  9.59s/it]Requesting API:  92%|█████████▏| 92/100 [13:29<00:56,  7.01s/it]Requesting API:  93%|█████████▎| 93/100 [13:42<01:00,  8.60s/it]Requesting API:  94%|█████████▍| 94/100 [13:49<00:50,  8.35s/it]Requesting API:  95%|█████████▌| 95/100 [14:10<01:00, 12.11s/it]Requesting API:  96%|█████████▌| 96/100 [14:16<00:40, 10.06s/it]Requesting API:  97%|█████████▋| 97/100 [14:49<00:51, 17.13s/it]Requesting API:  98%|█████████▊| 98/100 [15:00<00:30, 15.15s/it]Requesting API:  99%|█████████▉| 99/100 [15:13<00:14, 14.49s/it]2026-08-16:08:54:56 WARNING  [models.api_models:546] API returned null content. Content filled with `LMEVAL_MODEL_NONE_ANSWER_PLACEHOLDER = `. Check reasoning_content field or generation limits.
+Requesting API: 100%|██████████| 100/100 [16:03<00:00, 25.29s/it]Requesting API: 100%|██████████| 100/100 [16:03<00:00,  9.64s/it]
+fatal: not a git repository (or any of the parent directories): .git
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+2026-08-16:08:54:58 INFO     [loggers.evaluation_tracker:247] Saving results aggregated
+local-chat-completions ({'model': 'qwen38-nvfp4', 'base_url': 'http://127.0.0.1:8078/v1/chat/completions', 'tokenizer': 'unsloth/Qwen3.8-27B-NVFP4', 'num_concurrent': 8, 'max_retries': 3, 'tokenized_requests': False}), gen_kwargs: ({'temperature': 0, 'max_tokens': 4096}), limit: 100.0, num_fewshot: None, batch_size: 1
+|Tasks |Version|Filter|n-shot|        Metric         |   |Value |   |Stderr|
+|------|------:|------|-----:|-----------------------|---|-----:|---|------|
+|ifeval|      4|none  |     0|inst_level_loose_acc   |↑  |0.8221|±  |   N/A|
+|      |       |none  |     0|inst_level_strict_acc  |↑  |0.8221|±  |   N/A|
+|      |       |none  |     0|prompt_level_loose_acc |↑  |0.8300|±  |0.0378|
+|      |       |none  |     0|prompt_level_strict_acc|↑  |0.8300|±  |0.0378|
+
+IFEVAL_RC=0
+=== GPQA ===
+2026-08-16:08:54:58 WARNING  [config.evaluate_config:287] --limit SHOULD ONLY BE USED FOR TESTING. REAL METRICS SHOULD NOT BE COMPUTED USING LIMIT.
+2026-08-16:08:55:01 INFO     [_cli.run:388] Selected Tasks: ['gpqa_diamond_zeroshot']
+2026-08-16:08:55:01 INFO     [evaluator:214] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2026-08-16:08:55:01 INFO     [evaluator:239] Initializing local-completions model, with arguments: {'model': 'qwen38-nvfp4', 'base_url': 'http://127.0.0.1:8078/v1/completions', 'tokenizer': 'unsloth/Qwen3.8-27B-NVFP4', 'num_concurrent': 8, 'max_retries': 3, 'tokenized_requests': False}
+2026-08-16:08:55:01 INFO     [models.openai_completions:42] Remote tokenizer not supported. Using huggingface tokenizer backend.
+2026-08-16:08:55:01 INFO     [models.api_models:179] Using max length 2048 - 1
+2026-08-16:08:55:01 INFO     [models.api_models:200] Using tokenizer huggingface
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+2026-08-16:08:56:27 INFO     [evaluator_utils:446] Selected tasks:
+2026-08-16:08:56:27 INFO     [evaluator_utils:480] Task: gpqa_diamond_zeroshot (gpqa/zeroshot/gpqa_diamond_zeroshot.yaml)
+2026-08-16:08:56:27 INFO     [api.task:312] Building contexts for gpqa_diamond_zeroshot on rank 0...
+  0%|          | 0/100 [00:00<?, ?it/s]100%|██████████| 100/100 [00:00<00:00, 4207.68it/s]
+2026-08-16:08:56:28 INFO     [evaluator:585] Running loglikelihood requests
+Tokenizing inputs:   0%|          | 0/400 [00:00<?, ?it/s]Tokenizing inputs:  77%|███████▋  | 308/400 [00:00<00:00, 3072.17it/s]Tokenizing inputs: 100%|██████████| 400/400 [00:00<00:00, 3022.13it/s]
+Requesting API:   0%|          | 0/400 [00:00<?, ?it/s]Requesting API:   0%|          | 1/400 [00:02<15:55,  2.40s/it]Requesting API:   0%|          | 2/400 [00:03<10:22,  1.56s/it]Requesting API:   1%|          | 4/400 [00:03<05:06,  1.29it/s]Requesting API:   2%|▏         | 7/400 [00:04<02:53,  2.26it/s]Requesting API:   2%|▎         | 10/400 [00:05<02:17,  2.84it/s]Requesting API:   3%|▎         | 12/400 [00:06<02:17,  2.82it/s]Requesting API:   4%|▍         | 15/400 [00:06<01:48,  3.56it/s]Requesting API:   4%|▍         | 18/400 [00:07<01:37,  3.91it/s]Requesting API:   5%|▌         | 20/400 [00:07<01:43,  3.65it/s]Requesting API:   6%|▌         | 23/400 [00:08<01:26,  4.36it/s]Requesting API:   6%|▋         | 26/400 [00:08<01:20,  4.63it/s]Requesting API:   7%|▋         | 28/400 [00:09<01:27,  4.28it/s]Requesting API:   8%|▊         | 31/400 [00:09<01:13,  5.04it/s]Requesting API:   8%|▊         | 34/400 [00:10<01:12,  5.04it/s]Requesting API:   9%|▉         | 36/400 [00:10<01:21,  4.46it/s]Requesting API:  10%|▉         | 39/400 [00:11<01:09,  5.23it/s]Requesting API:  10%|█         | 42/400 [00:11<01:09,  5.16it/s]Requesting API:  11%|█         | 44/400 [00:12<01:17,  4.56it/s]Requesting API:  12%|█▏        | 47/400 [00:12<01:06,  5.33it/s]Requesting API:  12%|█▎        | 50/400 [00:13<01:06,  5.30it/s]Requesting API:  13%|█▎        | 52/400 [00:14<01:11,  4.90it/s]Requesting API:  14%|█▍        | 55/400 [00:14<01:00,  5.73it/s]Requesting API:  14%|█▍        | 58/400 [00:14<00:58,  5.86it/s]Requesting API:  15%|█▌        | 60/400 [00:15<01:04,  5.30it/s]Requesting API:  16%|█▌        | 63/400 [00:15<00:55,  6.09it/s]Requesting API:  16%|█▋        | 66/400 [00:16<00:53,  6.20it/s]Requesting API:  17%|█▋        | 68/400 [00:16<01:05,  5.03it/s]Requesting API:  18%|█▊        | 71/400 [00:17<01:12,  4.54it/s]Requesting API:  18%|█▊        | 74/400 [00:18<01:20,  4.03it/s]Requesting API:  19%|█▉        | 76/400 [00:19<01:26,  3.74it/s]Requesting API:  20%|█▉        | 79/400 [00:19<01:08,  4.69it/s]Requesting API:  20%|██        | 82/400 [00:20<01:15,  4.19it/s]Requesting API:  21%|██        | 84/400 [00:21<01:33,  3.39it/s]Requesting API:  22%|██▏       | 87/400 [00:21<01:22,  3.81it/s]Requesting API:  22%|██▎       | 90/400 [00:22<01:08,  4.50it/s]Requesting API:  23%|██▎       | 92/400 [00:22<01:07,  4.54it/s]Requesting API:  24%|██▍       | 95/400 [00:23<00:55,  5.53it/s]Requesting API:  24%|██▍       | 98/400 [00:23<00:50,  6.00it/s]Requesting API:  25%|██▌       | 100/400 [00:23<00:53,  5.65it/s]Requesting API:  26%|██▌       | 103/400 [00:24<00:45,  6.55it/s]Requesting API:  26%|██▋       | 106/400 [00:24<00:42,  6.94it/s]Requesting API:  27%|██▋       | 108/400 [00:24<00:45,  6.40it/s]Requesting API:  28%|██▊       | 111/400 [00:25<00:38,  7.41it/s]Requesting API:  28%|██▊       | 114/400 [00:26<00:51,  5.55it/s]Requesting API:  29%|██▉       | 116/400 [00:27<01:09,  4.06it/s]Requesting API:  30%|██▉       | 119/400 [00:27<01:03,  4.45it/s]Requesting API:  30%|███       | 122/400 [00:27<00:52,  5.28it/s]Requesting API:  31%|███       | 124/400 [00:28<00:52,  5.25it/s]Requesting API:  32%|███▏      | 127/400 [00:28<00:43,  6.35it/s]Requesting API:  32%|███▎      | 130/400 [00:28<00:39,  6.84it/s]Requesting API:  33%|███▎      | 132/400 [00:29<00:41,  6.40it/s]Requesting API:  34%|███▍      | 135/400 [00:29<00:35,  7.45it/s]Requesting API:  34%|███▍      | 138/400 [00:29<00:34,  7.70it/s]Requesting API:  35%|███▌      | 140/400 [00:30<00:37,  6.99it/s]Requesting API:  36%|███▌      | 143/400 [00:30<00:32,  7.99it/s]Requesting API:  36%|███▋      | 146/400 [00:30<00:31,  8.10it/s]Requesting API:  37%|███▋      | 148/400 [00:31<00:34,  7.34it/s]Requesting API:  38%|███▊      | 151/400 [00:31<00:30,  8.21it/s]Requesting API:  38%|███▊      | 154/400 [00:31<00:29,  8.29it/s]Requesting API:  39%|███▉      | 156/400 [00:32<00:32,  7.42it/s]Requesting API:  40%|███▉      | 159/400 [00:32<00:28,  8.37it/s]Requesting API:  40%|████      | 162/400 [00:32<00:28,  8.45it/s]Requesting API:  41%|████      | 164/400 [00:33<00:31,  7.60it/s]Requesting API:  42%|████▏     | 167/400 [00:33<00:27,  8.43it/s]Requesting API:  42%|████▎     | 170/400 [00:33<00:27,  8.51it/s]Requesting API:  43%|████▎     | 172/400 [00:34<00:29,  7.63it/s]Requesting API:  44%|████▍     | 175/400 [00:34<00:26,  8.59it/s]Requesting API:  44%|████▍     | 178/400 [00:34<00:25,  8.77it/s]Requesting API:  45%|████▌     | 180/400 [00:35<00:28,  7.81it/s]Requesting API:  46%|████▌     | 183/400 [00:35<00:25,  8.67it/s]Requesting API:  46%|████▋     | 186/400 [00:35<00:24,  8.71it/s]Requesting API:  47%|████▋     | 188/400 [00:36<00:27,  7.79it/s]Requesting API:  48%|████▊     | 191/400 [00:36<00:23,  8.77it/s]Requesting API:  48%|████▊     | 194/400 [00:36<00:23,  8.84it/s]Requesting API:  49%|████▉     | 196/400 [00:37<00:27,  7.55it/s]Requesting API:  50%|████▉     | 199/400 [00:37<00:28,  7.11it/s]Requesting API:  50%|█████     | 202/400 [00:37<00:27,  7.31it/s]Requesting API:  51%|█████     | 204/400 [00:38<00:28,  6.97it/s]Requesting API:  52%|█████▏    | 207/400 [00:38<00:24,  7.97it/s]Requesting API:  52%|█████▎    | 210/400 [00:38<00:22,  8.44it/s]Requesting API:  53%|█████▎    | 212/400 [00:39<00:24,  7.74it/s]Requesting API:  54%|█████▍    | 215/400 [00:39<00:21,  8.79it/s]Requesting API:  55%|█████▍    | 218/400 [00:39<00:20,  9.02it/s]Requesting API:  55%|█████▌    | 220/400 [00:40<00:22,  8.13it/s]Requesting API:  56%|█████▌    | 223/400 [00:40<00:19,  9.09it/s]Requesting API:  56%|█████▋    | 226/400 [00:40<00:18,  9.23it/s]Requesting API:  57%|█████▋    | 228/400 [00:40<00:20,  8.28it/s]Requesting API:  58%|█████▊    | 231/400 [00:41<00:18,  9.24it/s]Requesting API:  58%|█████▊    | 234/400 [00:41<00:17,  9.33it/s]Requesting API:  59%|█████▉    | 236/400 [00:41<00:19,  8.48it/s]Requesting API:  60%|█████▉    | 239/400 [00:42<00:17,  9.37it/s]Requesting API:  60%|██████    | 242/400 [00:42<00:16,  9.64it/s]Requesting API:  61%|██████    | 244/400 [00:42<00:17,  8.83it/s]Requesting API:  62%|██████▏   | 247/400 [00:42<00:15,  9.61it/s]Requesting API:  62%|██████▎   | 250/400 [00:43<00:15,  9.91it/s]Requesting API:  63%|██████▎   | 252/400 [00:43<00:16,  8.86it/s]Requesting API:  64%|██████▍   | 255/400 [00:43<00:14,  9.86it/s]Requesting API:  64%|██████▍   | 258/400 [00:44<00:14,  9.92it/s]Requesting API:  65%|██████▌   | 260/400 [00:44<00:15,  8.96it/s]Requesting API:  66%|██████▌   | 263/400 [00:44<00:13,  9.97it/s]Requesting API:  66%|██████▋   | 266/400 [00:44<00:13, 10.06it/s]Requesting API:  67%|██████▋   | 268/400 [00:45<00:14,  9.08it/s]Requesting API:  68%|██████▊   | 271/400 [00:45<00:12, 10.01it/s]Requesting API:  68%|██████▊   | 274/400 [00:45<00:12, 10.23it/s]Requesting API:  69%|██████▉   | 276/400 [00:45<00:13,  9.23it/s]Requesting API:  70%|██████▉   | 279/400 [00:46<00:11, 10.13it/s]Requesting API:  70%|███████   | 282/400 [00:46<00:11, 10.32it/s]Requesting API:  71%|███████   | 284/400 [00:46<00:12,  9.39it/s]Requesting API:  72%|███████▏  | 287/400 [00:47<00:10, 10.32it/s]Requesting API:  72%|███████▎  | 290/400 [00:47<00:10, 10.35it/s]Requesting API:  73%|███████▎  | 292/400 [00:47<00:11,  9.34it/s]Requesting API:  74%|███████▍  | 295/400 [00:47<00:10, 10.25it/s]Requesting API:  74%|███████▍  | 298/400 [00:48<00:09, 10.47it/s]Requesting API:  75%|███████▌  | 300/400 [00:48<00:10,  9.44it/s]Requesting API:  76%|███████▌  | 303/400 [00:48<00:09, 10.28it/s]Requesting API:  76%|███████▋  | 306/400 [00:48<00:08, 10.50it/s]Requesting API:  77%|███████▋  | 308/400 [00:49<00:09,  9.54it/s]Requesting API:  78%|███████▊  | 311/400 [00:49<00:08, 10.44it/s]Requesting API:  78%|███████▊  | 314/400 [00:49<00:07, 10.87it/s]Requesting API:  79%|███████▉  | 316/400 [00:49<00:08,  9.81it/s]Requesting API:  80%|███████▉  | 319/400 [00:50<00:07, 10.49it/s]Requesting API:  80%|████████  | 322/400 [00:50<00:07, 10.79it/s]Requesting API:  81%|████████  | 324/400 [00:50<00:07,  9.69it/s]Requesting API:  82%|████████▏ | 327/400 [00:50<00:06, 10.96it/s]Requesting API:  82%|████████▎ | 330/400 [00:51<00:06, 11.13it/s]Requesting API:  83%|████████▎ | 332/400 [00:51<00:06,  9.77it/s]Requesting API:  84%|████████▍ | 335/400 [00:51<00:05, 11.07it/s]Requesting API:  84%|████████▍ | 338/400 [00:51<00:05, 11.22it/s]Requesting API:  85%|████████▌ | 340/400 [00:52<00:06,  9.82it/s]Requesting API:  86%|████████▌ | 343/400 [00:52<00:05, 11.13it/s]Requesting API:  86%|████████▋ | 346/400 [00:52<00:04, 11.35it/s]Requesting API:  87%|████████▋ | 348/400 [00:52<00:05,  9.95it/s]Requesting API:  88%|████████▊ | 351/400 [00:53<00:04, 11.23it/s]Requesting API:  88%|████████▊ | 354/400 [00:53<00:04, 11.24it/s]Requesting API:  89%|████████▉ | 356/400 [00:53<00:04,  9.98it/s]Requesting API:  90%|████████▉ | 359/400 [00:53<00:03, 11.27it/s]Requesting API:  90%|█████████ | 362/400 [00:54<00:03, 11.53it/s]Requesting API:  91%|█████████ | 364/400 [00:54<00:03, 10.29it/s]Requesting API:  92%|█████████▏| 367/400 [00:54<00:02, 11.62it/s]Requesting API:  92%|█████████▎| 370/400 [00:54<00:02, 11.48it/s]Requesting API:  93%|█████████▎| 372/400 [00:55<00:02, 10.48it/s]Requesting API:  94%|█████████▍| 375/400 [00:55<00:02, 11.61it/s]Requesting API:  94%|█████████▍| 378/400 [00:55<00:01, 12.00it/s]Requesting API:  95%|█████████▌| 380/400 [00:55<00:01, 10.75it/s]Requesting API:  96%|█████████▌| 383/400 [00:55<00:01, 11.93it/s]Requesting API:  96%|█████████▋| 386/400 [00:56<00:01, 12.88it/s]Requesting API:  97%|█████████▋| 388/400 [00:56<00:01, 11.79it/s]Requesting API:  98%|█████████▊| 391/400 [00:56<00:00, 13.13it/s]Requesting API:  98%|█████████▊| 394/400 [00:56<00:00, 14.02it/s]Requesting API:  99%|█████████▉| 396/400 [00:56<00:00, 13.24it/s]Requesting API: 100%|██████████| 400/400 [00:56<00:00,  7.03it/s]
+fatal: not a git repository (or any of the parent directories): .git
+2026-08-16:08:57:25 INFO     [loggers.evaluation_tracker:247] Saving results aggregated
+local-completions ({'model': 'qwen38-nvfp4', 'base_url': 'http://127.0.0.1:8078/v1/completions', 'tokenizer': 'unsloth/Qwen3.8-27B-NVFP4', 'num_concurrent': 8, 'max_retries': 3, 'tokenized_requests': False}), gen_kwargs: ({}), limit: 100.0, num_fewshot: None, batch_size: 1
+|        Tasks        |Version|Filter|n-shot| Metric |   |Value|   |Stderr|
+|---------------------|------:|------|-----:|--------|---|----:|---|-----:|
+|gpqa_diamond_zeroshot|    2.2|none  |     0|acc     |↑  | 0.47|±  |0.0502|
+|                     |       |none  |     0|acc_norm|↑  | 0.47|±  |0.0502|
+
+GPQA_RC=0
+=== HLE ===
+HLE: 2500 total, 2158 text-only, using 100, concurrency 4
+[1/100] BAD gt='yeyo' finish=stop toks=2 acc=0.000 ETA 1.9m
+[2/100] BAD gt='Z+Z+Z+Z+Z' finish=stop toks=2 acc=0.000 ETA 1.1m
+[3/100] BAD gt='18' finish=stop toks=3 acc=0.000 ETA 0.7m
+[4/100] BAD gt='D' finish=stop toks=8 acc=0.000 ETA 0.6m
+[5/100] BAD gt='3' finish=stop toks=2 acc=0.000 ETA 0.8m
+[6/100] BAD gt='\\(-((d - 2k)^2) + d\\)' finish=stop toks=12 acc=0.000 ETA 0.8m
+[7/100] BAD gt='$1 + 3x + 6x^2 + 8x^3 + 6x^4 + 3x^5 + x^6$' finish=stop toks=18 acc=0.000 ETA 0.7m
+[8/100] BAD gt='$\\mathcal{A}^{\\alpha-}(X)$, denoting $\\cap_{\\delta>0} \\mathcal{A}^{\\alpha-\\delta}(X)$' finish=stop toks=14 acc=0.000 ETA 0.8m
+[9/100] BAD gt='E' finish=stop toks=2 acc=0.000 ETA 0.7m
+[10/100] OK  gt='\\mathbb{Z}' finish=stop toks=14 acc=0.100 ETA 0.7m
+[11/100] BAD gt='Katie kicked the knotted kite string, knowing it would take skill to unknot the tangled mess.' finish=stop toks=31 acc=0.091 ETA 0.7m
+[12/100] BAD gt='C' finish=stop toks=2 acc=0.083 ETA 0.6m
+[13/100] BAD gt='Sale Law' finish=stop toks=3 acc=0.077 ETA 0.6m
+[14/100] BAD gt='C' finish=stop toks=2 acc=0.071 ETA 0.6m
+[15/100] BAD gt='Shuriken' finish=stop toks=4 acc=0.067 ETA 0.6m
+[16/100] BAD gt='B' finish=stop toks=2 acc=0.062 ETA 0.6m
+[17/100] BAD gt='D+1' finish=stop toks=2 acc=0.059 ETA 0.5m
+[18/100] BAD gt='Yes' finish=stop toks=2 acc=0.056 ETA 0.5m
+[19/100] BAD gt='No, the regular subgradient may be empty.' finish=stop toks=2 acc=0.053 ETA 0.5m
+[20/100] BAD gt='Yes' finish=stop toks=9 acc=0.050 ETA 0.5m
+[21/100] BAD gt='\\frac{2}{7}' finish=stop toks=2 acc=0.048 ETA 0.5m
+[22/100] BAD gt='\\begin{pmatrix}8&9\\\\9&8\\end{pmatrix}' finish=stop toks=24 acc=0.045 ETA 0.5m
+[23/100] OK  gt='False' finish=stop toks=2 acc=0.087 ETA 0.5m
+[24/100] BAD gt='1' finish=stop toks=2 acc=0.083 ETA 0.4m
+[25/100] BAD gt='56' finish=stop toks=2 acc=0.080 ETA 0.4m
+[26/100] BAD gt='F' finish=stop toks=2 acc=0.077 ETA 0.4m
+[27/100] BAD gt='1430' finish=stop toks=2 acc=0.074 ETA 0.4m
+[28/100] BAD gt='min(max(0, T - z), z)' finish=stop toks=4 acc=0.071 ETA 0.4m
+[29/100] BAD gt='(1,4,5), (1,3,4,5,6)' finish=stop toks=11 acc=0.069 ETA 0.4m
+[30/100] BAD gt='\\frac{1-1/(\\pi+1)}{\\log(\\pi+1)}' finish=stop toks=2 acc=0.067 ETA 0.4m
+[31/100] BAD gt='J' finish=stop toks=2 acc=0.065 ETA 0.4m
+[32/100] BAD gt='6' finish=stop toks=2 acc=0.062 ETA 0.4m
+[33/100] BAD gt='J4s' finish=stop toks=4 acc=0.061 ETA 0.4m
+[34/100] BAD gt='1/1451520' finish=stop toks=7 acc=0.059 ETA 0.4m
+[35/100] BAD gt='B' finish=stop toks=6 acc=0.057 ETA 0.3m
+[36/100] OK  gt='C' finish=stop toks=17 acc=0.083 ETA 0.3m
+[37/100] BAD gt='D' finish=stop toks=2 acc=0.081 ETA 0.3m
+[38/100] BAD gt='8' finish=stop toks=2 acc=0.079 ETA 0.3m
+[39/100] BAD gt='$-m^2/2$' finish=stop toks=8 acc=0.077 ETA 0.3m
+[40/100] OK  gt='B' finish=stop toks=2 acc=0.100 ETA 0.3m
+[41/100] BAD gt='5.7' finish=stop toks=4 acc=0.098 ETA 0.3m
+[42/100] BAD gt='46.24' finish=stop toks=6 acc=0.095 ETA 0.3m
+[43/100] BAD gt='C' finish=stop toks=4 acc=0.093 ETA 0.3m
+[44/100] BAD gt='H' finish=stop toks=2 acc=0.091 ETA 0.3m
+[45/100] BAD gt='-0.5' finish=stop toks=5 acc=0.089 ETA 0.3m
+[46/100] BAD gt='flag{no_zeros}' finish=stop toks=12 acc=0.087 ETA 0.3m
+[47/100] BAD gt='C' finish=stop toks=5 acc=0.085 ETA 0.3m
+[48/100] BAD gt='5429515560378' finish=stop toks=5 acc=0.083 ETA 0.3m
+[49/100] BAD gt='D' finish=stop toks=5 acc=0.082 ETA 0.3m
+[50/100] OK  gt='G' finish=stop toks=9 acc=0.100 ETA 0.3m
+[51/100] BAD gt='(6, 14, 15, 7)' finish=stop toks=12 acc=0.098 ETA 0.3m
+[52/100] BAD gt='A' finish=stop toks=6 acc=0.096 ETA 0.3m
+[53/100] BAD gt='0' finish=stop toks=4 acc=0.094 ETA 0.2m
+[54/100] BAD gt='TC⁰' finish=stop toks=2 acc=0.093 ETA 0.2m
+[55/100] BAD gt='hereth' finish=stop toks=4 acc=0.091 ETA 0.2m
+[56/100] BAD gt='48' finish=stop toks=2 acc=0.089 ETA 0.2m
+[57/100] BAD gt='C' finish=stop toks=2 acc=0.088 ETA 0.2m
+[58/100] BAD gt='F' finish=stop toks=2 acc=0.086 ETA 0.2m
+[59/100] BAD gt='$2\\mathbb{Z}$' finish=stop toks=8 acc=0.085 ETA 0.2m
+[60/100] BAD gt='F(U_i, U_j, U_{ij})' finish=stop toks=9 acc=0.083 ETA 0.2m
+[61/100] BAD gt='2, 47176870 steps' finish=stop toks=9 acc=0.082 ETA 0.2m
+[62/100] BAD gt='California' finish=stop toks=4 acc=0.081 ETA 0.2m
+[63/100] BAD gt='Saint Sebastian' finish=stop toks=3 acc=0.079 ETA 0.2m
+[64/100] BAD gt='236(2),236(3),236(3A)' finish=stop toks=14 acc=0.078 ETA 0.2m
+[65/100] OK  gt='D' finish=stop toks=6 acc=0.092 ETA 0.2m
+[66/100] BAD gt='4' finish=stop toks=2 acc=0.091 ETA 0.2m
+[67/100] BAD gt='B' finish=stop toks=2 acc=0.090 ETA 0.2m
+[68/100] BAD gt='4' finish=stop toks=2 acc=0.088 ETA 0.2m
+[69/100] BAD gt='C' finish=stop toks=14 acc=0.087 ETA 0.1m
+[70/100] BAD gt='K' finish=stop toks=2 acc=0.086 ETA 0.1m
+[71/100] BAD gt='7' finish=stop toks=3 acc=0.085 ETA 0.1m
+[72/100] BAD gt='4' finish=stop toks=2 acc=0.083 ETA 0.1m
+[73/100] BAD gt='352311' finish=stop toks=7 acc=0.082 ETA 0.1m
+[74/100] OK  gt='1' finish=stop toks=2 acc=0.095 ETA 0.1m
+[75/100] BAD gt='4' finish=stop toks=2 acc=0.093 ETA 0.1m
+[76/100] BAD gt='No' finish=stop toks=2 acc=0.092 ETA 0.1m
+[77/100] BAD gt='F' finish=stop toks=2 acc=0.091 ETA 0.1m
+[78/100] BAD gt='E' finish=stop toks=2 acc=0.090 ETA 0.1m
+[79/100] BAD gt='\\left(N_1N_2 \\over n\\right)' finish=stop toks=42 acc=0.089 ETA 0.1m
+[80/100] BAD gt='8' finish=stop toks=2 acc=0.087 ETA 0.1m
+[81/100] BAD gt='C' finish=stop toks=2 acc=0.086 ETA 0.1m
+[82/100] OK  gt='I' finish=stop toks=2 acc=0.098 ETA 0.1m
+[83/100] BAD gt='6' finish=stop toks=2 acc=0.096 ETA 0.1m
+[84/100] BAD gt='kənʃə' finish=stop toks=5 acc=0.095 ETA 0.1m
+[85/100] BAD gt='684' finish=stop toks=4 acc=0.094 ETA 0.1m
+[86/100] BAD gt='8' finish=stop toks=2 acc=0.093 ETA 0.1m
+[87/100] BAD gt='(N+1)\\left\\lceil \\frac{\\pi}{2\\arcsin \\left( \\frac{1}{2t} \\right)} \\right\\rceil' finish=stop toks=6 acc=0.092 ETA 0.1m
+[88/100] OK  gt='D' finish=stop toks=7 acc=0.102 ETA 0.1m
+[89/100] BAD gt='F5 G♭5 G5 F5 G5 F5 E♭5 F5 G5 C5 F5' finish=stop toks=17 acc=0.101 ETA 0.1m
+[90/100] BAD gt='Chromatic Scale' finish=stop toks=3 acc=0.100 ETA 0.1m
+[91/100] BAD gt='Db5 D5 Eb5 E5 F5 Gb5 Db6 Db6 B5 Ab5' finish=stop toks=17 acc=0.099 ETA 0.0m
+[92/100] BAD gt='Virgil Elings' finish=stop toks=5 acc=0.098 ETA 0.0m
+[93/100] BAD gt='Canals on Mars' finish=stop toks=6 acc=0.097 ETA 0.0m
+[94/100] BAD gt='624' finish=stop toks=2 acc=0.096 ETA 0.0m
+[95/100] BAD gt='1.776 * 10^-3 ' finish=stop toks=13 acc=0.095 ETA 0.0m
+[96/100] BAD gt='A dodecagon' finish=stop toks=5 acc=0.094 ETA 0.0m
+[97/100] BAD gt='8' finish=stop toks=2 acc=0.093 ETA 0.0m
+[98/100] BAD gt='Benin and Madagascar' finish=stop toks=1535 acc=0.092 ETA 0.0m
+[99/100] BAD gt='29010' finish=length toks=2048 acc=0.091 ETA 0.0m
+[100/100] BAD gt='$\\frac{3}{10}$' finish=length toks=2048 acc=0.090 ETA 0.0m
+{"benchmark": "HLE-text", "n": 100, "correct": 9, "accuracy": 0.09, "model": "qwen38-nvfp4", "total_time_s": 112.7, "mode": "thinking-off, direct-answer, exact-match"}
+HLE_RC=0
+=== SPEED: decode_bench ===
+[thinking-off 512tok] tokens=512 total=26.30s TTFT=1.42s e2e=19.47 tok/s decode~=20.55 tok/s
+[thinking-on  512tok] tokens=512 total=25.98s TTFT=0.29s e2e=19.71 tok/s decode~=19.90 tok/s
+[thinking-off 1024tok] tokens=566 total=29.65s TTFT=0.27s e2e=19.09 tok/s decode~=19.24 tok/s
+DECODE_RC=0
+=== SPEED: arena (2k-51k, vLLM-parity depths) ===
+ctx_pp @ d2048: prompt_tokens=1077 e2e=1170ms prefill~=920 tok/s
+ctx_pp @ d4096: prompt_tokens=2097 e2e=1613ms prefill~=1300 tok/s
+ctx_pp @ d8192: prompt_tokens=4137 e2e=2728ms prefill~=1516 tok/s
+ctx_pp @ d16384: prompt_tokens=8247 e2e=5436ms prefill~=1517 tok/s
+ctx_pp @ d32768: prompt_tokens=16437 e2e=8533ms prefill~=1926 tok/s
+ctx_pp @ d51200: prompt_tokens=25647 e2e=13613ms prefill~=1884 tok/s
+ctx_tg @ d2048: prompt_tokens=1077 TTFT=634ms gen=69tok decode~=19.60 tok/s
+ctx_tg @ d4096: prompt_tokens=2097 TTFT=1107ms gen=75tok decode~=22.07 tok/s
+ctx_tg @ d8192: prompt_tokens=4137 TTFT=1982ms gen=77tok decode~=22.62 tok/s
+ctx_tg @ d16384: prompt_tokens=8247 TTFT=3838ms gen=94tok decode~=18.13 tok/s
+ctx_tg @ d32768: prompt_tokens=16437 TTFT=7894ms gen=114tok decode~=19.76 tok/s
+ctx_tg @ d51200: prompt_tokens=25647 TTFT=13105ms gen=47tok decode~=22.63 tok/s
+ARENA_RC=0
+stage8 end 2026-08-16T09:05:11+07:00

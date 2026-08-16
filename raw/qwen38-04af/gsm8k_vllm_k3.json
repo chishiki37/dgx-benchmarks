@@ -1,0 +1,19 @@
+{
+  "accuracy": 96.0,
+  "correct": 48,
+  "total": 50,
+  "errors": 1,
+  "elapsed_s": 933.1938242912292,
+  "avg_per_question_s": 18.663876485824584,
+  "max_tokens": 8192,
+  "failures": [
+    {
+      "question_num": 13,
+      "predicted": "12",
+      "expected": "13",
+      "finish_reason": "stop",
+      "completion_tokens": 1250,
+      "response_preview": "\n\nEach year, Carlos earns:\n\n- Lemon sales: \\(7 \\times 1.5 = 10.5\\) dollars\n- Watering/feeding cost: \\(3\\) dollars\n- Net yearly profit: \\(10.5 - 3 = 7.5\\) dollars\n\nHe needs to recover the initial planting cost of \\(90\\) dollars:\n\n\\[\n90 \\div 7.5 = 12\n\\]\n\nSo it will take 12 years to break even.\n\n####12"
+    }
+  ]
+}

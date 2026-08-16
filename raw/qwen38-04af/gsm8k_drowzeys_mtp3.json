@@ -1,0 +1,35 @@
+{
+  "accuracy": 94.0,
+  "correct": 47,
+  "total": 50,
+  "errors": 0,
+  "elapsed_s": 923.3290922641754,
+  "avg_per_question_s": 18.466581845283507,
+  "max_tokens": 4096,
+  "failures": [
+    {
+      "question_num": 13,
+      "predicted": "12",
+      "expected": "13",
+      "finish_reason": "stop",
+      "completion_tokens": 1071,
+      "response_preview": "\n\nThe tree costs $90 to plant.\n\nEach year, Carlos earns:\n\n\\[\n7 \\times 1.5 = 10.5\n\\]\n\nEach year, he spends $3 on water and feed, so his yearly profit is:\n\n\\[\n10.5 - 3 = 7.5\n\\]\n\nTo recover the $90 planting cost:\n\n\\[\n90 \\div 7.5 = 12\n\\]\n\nSo it will take 12 years for him to break even and start earning "
+    },
+    {
+      "question_num": 15,
+      "predicted": "40",
+      "expected": "60",
+      "finish_reason": "stop",
+      "completion_tokens": 204,
+      "response_preview": "\n\nThere are 20 students total.\n\n1. Contemporary dance:  \n20% of 20 = 4 students.\n\n2. Remaining students:  \n20 \u2212 4 = 16 students.\n\n3. Jazz dance:  \n25% of 16 = 4 students.\n\n4. Hip-hop dance:  \n16 \u2212 4 = 8 students.\n\n5. Percentage of the entire class in hip-hop:  \n8 / 20 = 0.40 = 40%.\n\n#### 40"
+    },
+    {
+      "question_num": 46,
+      "predicted": "44",
+      "expected": "104",
+      "finish_reason": "stop",
+      "completion_tokens": 3495,
+      "response_preview": "\n\nMonday: 5 articles  \nTuesday: \\(5 \\times \\frac{2}{5} = 2\\) articles  \nWednesday: \\(2 \\times 2 = 4\\) articles  \n\nTotal articles: \\(5 + 2 + 4 = 11\\)  \nTotal hours: \\(11 \\times 4 = 44\\)\n\n#### 44"
+    }
+  ]
+}
