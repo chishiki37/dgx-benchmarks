@@ -20,12 +20,15 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 
 8. **[Qwen3.8 FP8-Uncensored (single Spark)](08-qwen38-fp8-uncensored-single-spark.md)** — `orcarouter/Qwen3.8-27B-Uncensored-FP8` (gated, block-FP8, 1 MTP layer) on the same node + battery as Report 07. FP8 decode 12.4 tok/s (MTP1 +57%, bf16 KV wins by a hair) vs NVFP4's 19.5–20.7 — ~1.6× slower, less than the 2× weight-bytes ratio because the checkpoint kept only 1 of 3 MTP layers. Quality is quant- and abliteration-neutral: GSM8K 96%, HumanEval 90%, IFEval 0.82, GPQA 0.44, HLE 0.11 — all within NVFP4 noise. Includes the 04af IPv6 blackhole (Python HTTP hangs, curl survives) and the lm_eval timeout/session-close failure mode slow models trigger.
 
+9. **[DeepSeek V4 Flash Vision-Exp first run](09-dsv4-vision-exp-first-run.md)** — Official Vision-Exp checkpoint (published 08-31) on the updated MiaAI-Lab recipe, 2× DGX Spark, 1M ctx. Decode tax: 38.0 tok/s single (−33% vs 0731-ablit k=3), bench-window spec acceptance 27.8% (heavier n_predict=3 draft head + prose workload). Quality at ceiling: GSM8K 98% (one extraction artifact), HumanEval 96% — fixes the long-standing HumanEval/32 checkpoint bug. Capability add: native image_url vision + budgeted reasoning.
+
 ## Key Results
 
 | Config | Framework | Decode (tok/s) | GSM8K | HumanEval |
 |--------|-----------|:--------------:|:-----:|:---------:|
 | **Nemotron NVFP4** | **vLLM** | **95.6** | **100%** | **92%** |
 | **DSpark-Optimized k=3** | **vLLM DSpark** | **56.4** | **100%** | **94%** |
+| DeepSeek V4 Flash Vision-Exp (official) | vLLM DSpark k=6 | 38.0 | 98%¹ | 96% |
 | **SuperDeepSeek-MQ** | **vLLM DSpark** | **36.8** | **92%*** | **96%** |
 | Ablit (DSpark runtime) | vLLM DSpark | 26.9 | 96%* | 96% |
 | Qwen3.8 drowzeys MTP3 (256K) | vLLM GB10 0.27 | 19.5–20.6 | 94% | 92% |
@@ -37,6 +40,7 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 | Glimmer NVFP4 | SGLang | 11.3 | 86% | 82% |
 
 \* After smart-extraction re-score (thinking mode puts reasoning in a separate field, breaking simple `#### N` regex).
+¹ Opposite artifact: model answered `20.00.` for expected `20` — numerically correct, trailing period broke the harness's float parse; effectively at the 50/50 ceiling.
 † Prior campaign, same model + MTP-3, same decode harness family (Report 07).
 
 ## Hardware

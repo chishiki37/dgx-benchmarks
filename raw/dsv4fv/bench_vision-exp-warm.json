@@ -1,0 +1,12 @@
+{
+  "label": "vision-exp-warm",
+  "endpoint": "http://127.0.0.1:8888",
+  "model": "deepseek-v4-flash-vision-exp",
+  "single_stream_tok_s": 38.0,
+  "c4_aggregate_tok_s": 76.6,
+  "c6_aggregate_tok_s": 102.4,
+  "c8_aggregate_tok_s": 80.5,
+  "max_tokens": 256,
+  "thinking": false,
+  "timestamp": "2026-09-01 10:53:43 +07"
+}
