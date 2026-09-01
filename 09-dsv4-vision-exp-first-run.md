@@ -92,4 +92,59 @@ recipe `ABLITERATED=1` + 26-shard overlay), and an optional greedy-draft probe.
    set; dual-HCA exact selector `=rocep1s0f0,roceP2p1s0f0` per the recipe's measured note.
 4. `.env.dspark` uses bare image tag (no digest) — docker save/load doesn't carry digests.
 
-Raw: [`raw/dsv4fv/`](raw/dsv4fv/) — speed JSONs (fresh + warm), GSM8K/HumanEval results, both harnesses.
+## Abliterated variant: `drowzeys/keys-DeepSeekV4Flash-Vision-EXP-ablit` (same recipe, `ABLITERATED=1`)
+
+The Keys abliterated checkpoint is the official Vision-Exp with 26 edited tensors
+(layers.10–35 `attn.wo_b`, refusal-direction removal, packed into shards 00012–00037).
+Deployment used Mia's overlay path: fetched only the 26 unique shards + small files
+(86.7 GiB, gated hub, token purged after), then materialized the full snapshot on both
+nodes by linking the 55 unchanged files from the official cache (symlink-shared variant
+— hardlinking needed root-owned official blobs, so shared files symlink at them instead;
+harmless for serving).
+
+**One operational snag:** the first abliterated boot wedged ~15 min after graph capture —
+head EngineCore looping `shm_broadcast: No available shared memory broadcast block`, API
+never came up. Exact signature of issue #141 (stochastic TP=2 sparse-MLA stall, documented
+in the recipe env). Fix: `DSPARK_ENABLE_ISSUE141_SPARSE_MLA_CHUNK=1` (chunk-64 mitigation);
+second boot clean. The official campaign never needed the flag — consistent with the
+recipe's note that #141 incidence is stochastic per burst, not config-deterministic.
+
+**Speed (warm, thinking off):**
+
+| metric | Vision-Exp official | Vision-Exp abliterated |
+|---|---|---|
+| Single-stream | 38.0 | 36.2 (run spread 33.5–39.4) |
+| C4 agg | 76.6 | 75.3 |
+| C6 agg | 102.4 | 93.1 |
+| C8 agg | 80.5 | 80.6 |
+
+Same decode band — abliteration is speed-neutral within run variance.
+
+**Quality:**
+
+| benchmark | official | abliterated |
+|---|---|---|
+| GSM8K | 49/50 (extraction artifact) | 49/50 — one real miss (q40: expected 8, answered 12) |
+| HumanEval | 48/50, fails {/10, /38} | 48/50, fails {/10, /38} — identical set |
+
+Same quality within 50-sample noise; the HumanEval/32 fix carries over (abliterated is
+built on Vision-Exp). The point of this checkpoint is refusal removal, not benchmark
+movement — and on that axis it's the drop-in replacement for the old 0731-ablit serving role.
+
+## Three-way summary
+
+| | 0731-ablit k=3 (Aug) | Vision-Exp official | Vision-Exp abliterated |
+|---|---|---|---|
+| Single-stream | **56.4** | 38.0 | 36.2 |
+| C4 agg | **107.8** | 76.6 | 75.3 |
+| C8 agg | **121.4** | 80.5 | 80.6 |
+| GSM8K | 50/50 | 49/50¹ | 49/50 |
+| HumanEval | 47/50 {10,32,38} | 48/50 {10,38} | 48/50 {10,38} |
+| Vision / reasoning modes | — | ✓ | ✓ |
+| Refusal removed | ✓ | — | ✓ |
+
+**Fleet guidance:** 0731-ablit k=3 stays the latency pick (−33% faster decode);
+Vision-Exp abliterated is the capability pick (vision + reasoning + fixed /32, uncensored);
+official Vision-Exp for aligned/vision workloads. All three reproduce cleanly on this recipe.
+
+Raw: [`raw/dsv4fv/`](raw/dsv4fv/) — speed JSONs (official fresh/warm + abliterated), GSM8K/HumanEval results for both variants, harnesses.

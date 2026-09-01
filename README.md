@@ -29,6 +29,7 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 | **Nemotron NVFP4** | **vLLM** | **95.6** | **100%** | **92%** |
 | **DSpark-Optimized k=3** | **vLLM DSpark** | **56.4** | **100%** | **94%** |
 | DeepSeek V4 Flash Vision-Exp (official) | vLLM DSpark k=6 | 38.0 | 98%¹ | 96% |
+| DeepSeek V4 Flash Vision-Exp abliterated (Keys) | vLLM DSpark k=6 | 36.2 | 98% | 96% |
 | **SuperDeepSeek-MQ** | **vLLM DSpark** | **36.8** | **92%*** | **96%** |
 | Ablit (DSpark runtime) | vLLM DSpark | 26.9 | 96%* | 96% |
 | Qwen3.8 drowzeys MTP3 (256K) | vLLM GB10 0.27 | 19.5–20.6 | 94% | 92% |
