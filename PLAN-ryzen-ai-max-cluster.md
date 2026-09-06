@@ -118,24 +118,23 @@ The CX-5 already exposes `/sys/class/infiniband/mlx5_0`, so RoCEv2 was available
 the PoC and simply was not exercised. This is the highest-value next measurement,
 independent of which NIC is installed.
 
-## 2. Parallelism strategy is unchosen, and it changes the target
+## 2. Parallelism strategy — RESOLVED: tensor parallel
 
-The 50 Gb/s figure appears to be a bandwidth intuition rather than a derived requirement.
-What is actually needed depends entirely on how the model is split:
+Settled 2026-09-06 from prior PoCs: **pipeline parallel is materially slower than tensor
+parallel for these workloads, and TP wins even at 50 Gb/s.** PP is therefore not a fallback
+and the low-bandwidth escape hatch is closed.
 
-- **Tensor parallel** — all-reduce every layer. Latency-critical, bandwidth-hungry.
-  Needs RDMA. This is what the Spark fleet does (TP=2, TP=4) over 200G.
-- **Pipeline parallel** — only the activation tensor crosses each node boundary, once
-  per token. For hidden 8192 at bf16 that is ~16 KB/token; at 50 tok/s, well under
-  1 Gb/s. **Bandwidth is nearly irrelevant, and TCP latency is tolerable** because there
-  is one hop per token rather than 160.
+Consequences, which now bind the rest of the plan:
 
-**If the goal is capacity (run bigger models) rather than single-stream speed, pipeline
-parallelism over the existing 10GbE may already be sufficient** — and the entire OCuLink
-programme is unnecessary. If the goal is single-stream decode speed matching the Spark
-TP deployments, RDMA is mandatory and 50 Gb/s is the floor.
-
-Deciding this first would either validate the hardware spend or avoid it.
+- **RDMA is mandatory.** TP is ~120-160 all-reduce round-trips per token; the PoC's 590 us
+  TCP RTT implies a ~10 tok/s ceiling. Thunderbolt/USB4 is disqualified outright — it is a
+  netdev driver with no verbs path, and caps at 40 Gb/s signaling regardless.
+- **The 50 Gb/s target is real** and the Gen4 NIC is on the critical path.
+- **Prefill, not decode, is the bandwidth risk.** TP all-reduce volume during decode is
+  small (~1 Gb/s at realistic token rates), but prefill scales with sequence length. At the
+  1M-context shapes this fleet targets, 50 Gb/s is ~4x less fabric than the Spark
+  reference's 200G, and TTFT will carry that. Worth computing for the specific model
+  before assuming the target is sufficient.
 
 ## 3. Software stack is the largest unvalidated risk
 
