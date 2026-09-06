@@ -24,6 +24,10 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 
 10. **[aimax ↔ Spark 100G over OCuLink](10-aimax-spark-100g-oculink-link.md)** — New lane: x86 workstation (Ryzen AI MAX+ 395) to `edgexpert-9105` via ConnectX-5 in an AOOSTAR AG02 OCuLink dock. Link negotiates 100GbE but delivers **22.3 Gb/s** — the ceiling is PCIe 3.0 x4 (31.5 Gb/s raw), imposed by the M.2→OCuLink path, not the wire. Run ended when the NIC took a fatal error under 8-stream load and dropped off the bus (`rev ff`, BARs gone, recoverable only by power cycle). Includes component elimination — QSFP cable and Spark ruled out, thermal/dock-power the leading suspects — and the AER-disabled caveat that limits what the logs can prove.
 
+## Plans
+
+- **[Ryzen AI MAX+ 395 cluster plan](PLAN-ryzen-ai-max-cluster.md)** — Standing up a distributed-inference cluster on Strix Halo nodes as a parallel track to the Spark fleet. Phase 1 (single-link PoC) complete at 22.3 Gb/s; covers the PCIe x4 arithmetic that makes a Gen4 NIC mandatory for the 50 Gb/s target, and the gaps — RDMA vs TCP metrics, TP vs PP strategy, RCCL/ROCm maturity, USB4 as an unexplored second interconnect.
+
 ## Key Results
 
 | Config | Framework | Decode (tok/s) | GSM8K | HumanEval |
