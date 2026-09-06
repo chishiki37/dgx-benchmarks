@@ -21,13 +21,18 @@ Reference architecture is the Spark fleet — 200G RoCEv2, MTU 9000, NCCL over d
 Chain: M.2 slot → OCuLink adapter → OCuLink cable → AOOSTAR AG01 dock →
 Mellanox MCX515A-CCAT → QSFP28 DAC → `edgexpert-9105`.
 
-Result: **22.3 Gb/s** (4 streams), 19.5 Gb/s single, 0.59 ms RTT, MTU 1500.
-Full detail in [report 10](10-aimax-spark-100g-oculink-link.md).
+Initial result: **22.3 Gb/s** (4 streams), MTU 1500, ending with the NIC dropping off the
+PCIe bus under 8-stream load — [report 10](10-aimax-spark-100g-oculink-link.md).
 
-**Verdict: concept proven, target not met.** 22.3 Gb/s is 2.2× the 10GbE baseline, which
-establishes that the OCuLink path is viable at all. But it is **not** 50 Gb/s, and it
-cannot become 50 Gb/s with this NIC — see the math below. The run also ended with the
-NIC dropping off the PCIe bus under 8-stream load, unrecovered without a power cycle.
+**After the fix** ([report 11](11-oculink-lane-resolved.md)): the drop was **ASPM**, cured by
+`pcie_aspm=off pci=realloc`. With MTU 9000 the lane now runs **28.0 Gb/s** (89% of the
+31.5 Gb/s Gen3 x4 ceiling) and, far more importantly, **1.34 µs RDMA write latency**.
+
+**Verdict: concept proven, and the metric that matters is excellent.** 28.0 Gb/s is 2.8× the
+10GbE baseline but still not 50 Gb/s, and cannot become 50 Gb/s with this NIC — see the math
+below. That no longer governs the decision: at 1.34 µs the *latency* budget for tensor
+parallelism is comfortable, and latency is the binding constraint (gap #1). The lane is
+stable under the full 1→8 stream ramp that previously killed it.
 
 ## The bandwidth ceiling is arithmetic, not tuning
 
@@ -64,14 +69,17 @@ This single read decides whether the plan is viable. Treat it as a go/no-go gate
 
 Same slot, adapter, cable, and dock; different card. Serves two purposes at once:
 
-- **Bandwidth:** does Gen4 x4 materialize, and does it clear 50 Gb/s?
-- **Root cause:** it is the card-swap arm of the ConnectX-5 failure isolation. E810
-  stable under load implicates the CX-5; E810 also dropping implicates the dock, cable,
-  adapter, or the dock's thermal/power environment.
+- **Bandwidth:** does Gen4 x4 materialize, and does it clear 50 Gb/s? This is now the
+  **only** reason to do the swap.
+- ~~Root cause: the card-swap arm of the ConnectX-5 failure isolation.~~ **No longer needed.**
+  The root cause is known: ASPM. The CX-5 survives the full ramp with the kernel params in
+  place, and both thermal and slot power were disproved directly (flat 70–71 °C under load;
+  the kernel reports the slot advertising 75 W). **The fan test is unnecessary** and the
+  comparison is no longer confounded.
 
-**Run the CX-5 fan test first.** Without it, a successful E810 result is confounded —
-you will not know whether you fixed a card fault or merely installed a cooler-running
-part. Five minutes with a desk fan removes that ambiguity permanently.
+Keep `pcie_aspm=off pci=realloc` on the cmdline for the E810 too. Untested with `ice`, but
+they are what made this dock path stable, and there is no reason to think the root port
+behaves differently with a different card.
 
 Notes: driver is `ice`, not `mlx5`. Wants a DDP package present (`dmesg | grep -i ddp`)
 or it runs degraded. RoCEv2 comes via `irdma`.
@@ -91,7 +99,7 @@ becomes load-bearing here — see open questions.
 
 # Gaps and risks
 
-## 1. iperf3 TCP bandwidth is the wrong metric — this is the biggest gap
+## 1. iperf3 TCP bandwidth is the wrong metric — RESOLVED: 1.34 µs measured
 
 The PoC measured TCP throughput. Distributed inference does not run on TCP throughput;
 it runs on **collective operations**, and for tensor parallelism the binding constraint
@@ -103,13 +111,15 @@ token. A 60–80 layer model is therefore 120–160 synchronization round-trips 
 | Transport | Round-trip | 160 RTs/token | Implied ceiling |
 |---|---|---|---|
 | TCP/IP (measured PoC) | ~590 µs | ~94 ms | **~10 tok/s** |
-| RoCEv2 RDMA | ~2–5 µs | ~0.3–0.8 ms | ~1,000+ tok/s |
+| **RoCEv2 RDMA (measured 2026-09-06)** | **1.34 µs** | **0.21 ms** | **~4,700 tok/s** |
 
 **A 50 Gb/s TCP link would still be unusable for tensor parallelism.** The Spark fleet
-does not run TCP — it runs NCCL over RoCEv2, which is why it works. Any Ryzen cluster
-must reproduce that, and the PoC has not yet demonstrated RDMA at all.
+does not run TCP — it runs NCCL over RoCEv2, which is why it works.
 
-**Action:** re-baseline on RDMA metrics before drawing conclusions about the plan.
+**This gap is now closed.** RoCEv2 was measured end to end at **1.34 µs typical**
+(min 1.31, 99% 1.70) — better than the 2–5 µs this section assumed, and ~4× better than
+kyuz0's 5.23 µs on E810 Gen4. Network overhead is ~0.21 ms/token, so the interconnect is
+**not** the bottleneck for TP on this lane. Bandwidth came in at 28.03 Gb/s.
 
 ```bash
 # perftest (RoCE) - the numbers that actually matter
@@ -117,9 +127,8 @@ ib_write_bw  -d <rdma_dev> -x <gid> -F   # bandwidth
 ib_write_lat -d <rdma_dev> -x <gid> -F   # latency  <- the critical one
 ```
 
-The CX-5 already exposes `/sys/class/infiniband/mlx5_0`, so RoCEv2 was available during
-the PoC and simply was not exercised. This is the highest-value next measurement,
-independent of which NIC is installed.
+RoCEv2 GID is **index 3 on both ends** (`mlx5_0` here, `rocep1s0f1` on the peer). Full
+method and numbers in [report 11](11-oculink-lane-resolved.md).
 
 ## 2. Parallelism strategy — RESOLVED: tensor parallel
 
@@ -206,6 +215,11 @@ dock that a normal PCIe slot would not. **Strix Halo boards exist with a native 
 slot** (e.g. Framework Desktop). Same four lanes, same ceiling — but the adapter, cable,
 and dock disappear, and with them most of the signal-integrity and slot-power risk.
 
+Tempered by report 11: the failure turned out to be **ASPM, a link power-management
+setting**, not signal integrity or slot power — both of which were disproved. A kernel
+parameter fixed it. The chain is more trustworthy than it looked, so this is now a
+preference rather than a correction.
+
 If a second node is being purchased anyway, buying one with a real slot rather than
 replicating the OCuLink stack is worth costing out. It would also make the two nodes
 non-identical, which is itself a useful A/B on whether the dock is the problem.
@@ -219,13 +233,19 @@ existing eight nodes.
 
 ## 9. Operational items carried over from the PoC
 
-- **MTU 9000 was never enabled** — both ends still at 1500. The Spark fabric already runs
-  jumbo; report 04 measured **−77% fabric latency** from that change alone. Free win,
-  not yet taken.
+- ~~MTU 9000 was never enabled~~ — **DONE.** Both ends at 9000, jumbo path verified end to
+  end, persisted in the `qsfp-sparklink` NetworkManager profile.
 - **AER is disabled on this platform** (`_OSC`), so PCIe errors are invisible. Any future
-  bus-level fault will be as hard to diagnose as this one was.
-- **Thermals are unmanaged.** A datacenter NIC in an open dock has no directed airflow.
-  Whatever card is installed, this needs solving before sustained load is trusted.
+  bus-level fault will be as hard to diagnose as this one was — which is why this one was
+  solved by hypothesis elimination rather than error counters.
+- **The kernel params are load-bearing.** `iommu=pt pci=realloc pcie_aspm=off` are persisted
+  in `/etc/default/grub`. Losing them very likely brings the fatal drop back.
+- **Thermals are unmanaged but measured, and are not a problem.** The CX-5 idles warm at
+  ~70 °C in the open dock, but stays **flat at 70–71 °C through 20 s of 8-stream load**
+  against a 105 °C critical — a 100G part pushing 28 Gb/s is barely working. Read temperature
+  from the kernel's mlx5 hwmon sensor (`/sys/class/hwmon/hwmon*/temp1_input` where `name` is
+  `mlx5`); **`mget_temp_ext` does not exist** in Ubuntu's `mstflint` package, only in NVIDIA's
+  proprietary MFT. Re-check if a hotter card (the E810) goes in.
 
 ---
 
