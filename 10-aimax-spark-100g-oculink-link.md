@@ -1,5 +1,11 @@
 # 10 — aimax ↔ Spark 100G over OCuLink: 22.3 Gb/s ceiling and a fatal PCIe drop (2026-09-06)
 
+> **Superseded (2026-09-06).** Both headline conclusions below are out of date. The fatal
+> PCIe drop was ASPM and is fixed by `pcie_aspm=off pci=realloc`; the 22.3 Gb/s ceiling rose
+> to 28.0 Gb/s. Thermal and dock power were both disproved, so the fan test queued here is
+> unnecessary. See [report 11](11-oculink-lane-resolved.md). Retained for the forensics.
+
+
 Scope: first characterization of a **new lane** — an x86 workstation (`aimax`, AMD Ryzen AI
 MAX+ 395 / Strix Halo) attached to `edgexpert-9105` by a ConnectX-5 100GbE NIC housed in an
 external OCuLink dock. Unlike reports 01–09 this is not a model benchmark; it is a link

@@ -1,6 +1,9 @@
 # PLAN — Distributed inference on Ryzen AI MAX+ 395 (Strix Halo)
 
-Status: **Phase 1 (single-link PoC) complete.** Written 2026-09-06.
+Status: **Phase 1 (single-link PoC) complete; lane fault resolved.** Written 2026-09-06,
+updated 2026-09-06 after the post-reboot gates — see [report 11](11-oculink-lane-resolved.md).
+The CX-5's fatal PCIe drop was **ASPM** and is fixed; the lane now runs **28.0 Gb/s at
+1.34 µs RDMA latency**, and **TP is confirmed viable**.
 
 ## Objective
 
@@ -247,13 +250,16 @@ existing eight nodes.
 
 | # | Action | Cost | Unblocks |
 |---|---|---|---|
-| 1 | Power-cycle `aimax`, run `post-reboot.sh` | minutes | link restored |
-| 2 | CX-5 fan test under 8-stream load | minutes | root cause, un-confounds Phase 2 |
-| 3 | `ib_write_lat` / `ib_write_bw` over RoCE | ~1 hr | gap #1 — the real metric |
-| 4 | Enable MTU 9000 both ends, re-measure | minutes | free throughput + latency |
+| 1 | ~~Power-cycle `aimax`, run the gate scripts~~ | — | **DONE** — link restored, all 4 gates passed |
+| 2 | ~~CX-5 fan test under 8-stream load~~ | — | **UNNECESSARY** — thermal disproved (flat 70–71 °C under load) |
+| 3 | ~~`ib_write_lat` / `ib_write_bw` over RoCE~~ | — | **DONE** — 1.34 µs / 28.03 Gb/s; gap #1 closed, TP viable |
+| 4 | ~~Enable MTU 9000 both ends, re-measure~~ | — | **DONE** — both ends at 9000, jumbo path verified |
 | 5 | 2-node llama.cpp RPC over existing 10GbE | ~1 day | gap #3 — validates software before hardware spend |
 | 6 | USB4 `thunderbolt_net` link test | 1 cable | gap #6 — possibly bypasses OCuLink entirely |
-| 7 | E810 install → read `current_link_speed` **first** | on arrival | go/no-go on the whole plan |
+| 7 | E810 install → read `current_link_speed` **first** | on arrival | bandwidth only; its A/B role is moot now |
 
-Items 3, 5, and 6 are all runnable before the E810 arrives and are more informative than
-any further iperf3 tuning.
+**Items 5 and 6 are the live ones.** Both are runnable before the E810 arrives and are more
+informative than any further iperf3 tuning. Item 5 is the highest value on the board: Phase 3
+means buying a second node plus dock, adapter, cable and NIC, and item 5 is what validates the
+software stack before that spend. Gate 3 proved the *fabric*; it said nothing about whether
+distributed inference actually works across two nodes.
