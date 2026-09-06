@@ -1,0 +1,22 @@
+# PCIe path: M.2 -> OCuLink adapter -> OCuLink cable -> AOOSTAR AG02 dock -> ConnectX-5
+# captured 2026-09-06T20:41:31+07:00 on aimax (AMD Ryzen AI MAX+ 395, Strix Halo)
+
+## kernel link-budget line at enumeration (boot 18:39:34)
+Sep 06 18:39:34 localhost.localdomain kernel: pci 0000:c1:00.0: 15.753 Gb/s available PCIe bandwidth, limited by 16.0 GT/s PCIe x1 link at 0000:00:02.1 (capable of 63.012 Gb/s with 16.0 GT/s PCIe x4 link)
+Sep 06 18:39:34 localhost.localdomain kernel: pci 0000:c4:00.0: 31.504 Gb/s available PCIe bandwidth, limited by 8.0 GT/s PCIe x4 link at 0000:00:02.5 (capable of 126.016 Gb/s with 8.0 GT/s PCIe x16 link)
+
+## root ports (max/current width and speed)
+0000:00:01.1  max=x1 cur=x16  2.5 GT/s PCIe -> 2.5 GT/s PCIe   children: 0000:00:01.1:pcie001 0000:00:01.1:pcie004 
+0000:00:01.2  max=x1 cur=x16  2.5 GT/s PCIe -> 2.5 GT/s PCIe   children: 0000:00:01.2:pcie001 0000:00:01.2:pcie004 
+0000:00:02.1  max=x1 cur=x1  16.0 GT/s PCIe -> 16.0 GT/s PCIe   children: 0000:00:02.1:pcie001 0000:00:02.1:pcie010 0000:c1:00.0 
+0000:00:02.3  max=x1 cur=x1  16.0 GT/s PCIe -> 5.0 GT/s PCIe   children: 0000:00:02.3:pcie001 0000:00:02.3:pcie010 0000:c2:00.0 
+0000:00:02.4  max=x1 cur=x1  16.0 GT/s PCIe -> 5.0 GT/s PCIe   children: 0000:00:02.4:pcie001 0000:00:02.4:pcie010 0000:c3:00.0 
+0000:00:02.5  max=x4 cur=x4  16.0 GT/s PCIe -> 8.0 GT/s PCIe   children: 0000:00:02.5:pcie001 0000:00:02.5:pcie010 0000:c4:00.0 
+0000:00:03.1  max=x2 cur=x2  16.0 GT/s PCIe -> 16.0 GT/s PCIe   children: 0000:00:03.1:pcie001 0000:00:03.1:pcie010 0000:c5:00.0 
+0000:00:03.3  max=x2 cur=x2  16.0 GT/s PCIe -> 16.0 GT/s PCIe   children: 0000:00:03.3:pcie001 0000:00:03.3:pcie010 0000:c6:00.0 
+0000:00:08.1  max=x16 cur=x16  16.0 GT/s PCIe -> 16.0 GT/s PCIe   children: 0000:00:08.1:pcie001 0000:00:08.1:pcie010 0000:c7:00.0 0000:c7:00.1 0000:c7:00.2 0000:c7:00.4 0000:c7:00.5 0000:c7:00.6 0000:c7:00.7 
+0000:00:08.2  max=x16 cur=x16  16.0 GT/s PCIe -> 16.0 GT/s PCIe   children: 0000:00:08.2:pcie001 0000:00:08.2:pcie010 0000:c8:00.0 0000:c8:00.1 
+0000:00:08.3  max=x16 cur=x16  16.0 GT/s PCIe -> 16.0 GT/s PCIe   children: 0000:00:08.3:pcie001 0000:00:08.3:pcie010 0000:c9:00.0 0000:c9:00.3 0000:c9:00.4 0000:c9:00.5 0000:c9:00.6 
+
+## AER availability
+Sep 06 18:39:34 localhost.localdomain kernel: acpi PNP0A08:00: _OSC: platform does not support [SHPCHotplug AER LTR DPC]

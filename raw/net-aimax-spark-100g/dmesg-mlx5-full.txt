@@ -1,0 +1,48 @@
+Sep 06 18:39:34 localhost.localdomain kernel: pci 0000:c4:00.0: [15b3:1017] type 00 class 0x020000 PCIe Endpoint
+Sep 06 18:39:34 localhost.localdomain kernel: pci 0000:c4:00.0: BAR 0 [mem 0x9822000000-0x9823ffffff 64bit pref]
+Sep 06 18:39:34 localhost.localdomain kernel: pci 0000:c4:00.0: ROM [mem 0xddd00000-0xdddfffff pref]
+Sep 06 18:39:34 localhost.localdomain kernel: pci 0000:c4:00.0: PME# supported from D3cold
+Sep 06 18:39:34 localhost.localdomain kernel: pci 0000:c4:00.0: 31.504 Gb/s available PCIe bandwidth, limited by 8.0 GT/s PCIe x4 link at 0000:00:02.5 (capable of 126.016 Gb/s with 8.0 GT/s PCIe x16 link)
+Sep 06 18:39:34 localhost.localdomain kernel: pci 0000:c4:00.0: Adding to iommu group 21
+Sep 06 18:39:36 aimax kernel: mlx5_core 0000:c4:00.0: firmware version: 16.35.4030
+Sep 06 18:39:36 aimax kernel: mlx5_core 0000:c4:00.0: 31.504 Gb/s available PCIe bandwidth, limited by 8.0 GT/s PCIe x4 link at 0000:00:02.5 (capable of 126.016 Gb/s with 8.0 GT/s PCIe x16 link)
+Sep 06 18:39:37 aimax kernel: mlx5_core 0000:c4:00.0: Rate limit: 127 rates are supported, range: 0Mbps to 97656Mbps
+Sep 06 18:39:37 aimax kernel: mlx5_core 0000:c4:00.0: E-Switch: Total vports 2, per vport: max uc(128) max mc(2048)
+Sep 06 18:39:37 aimax kernel: mlx5_core 0000:c4:00.0: Flow counters bulk query buffer size increased, bulk_query_len(8)
+Sep 06 18:39:37 aimax kernel: mlx5_core 0000:c4:00.0: Port module event: module 0, Cable plugged
+Sep 06 18:39:37 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_pcie_event:331:(pid 235): PCIe slot advertised sufficient power (75W).
+Sep 06 18:39:37 aimax kernel: mlx5_core 0000:c4:00.0 eth0: Disabling rxhash, not supported when CQE compress is active
+Sep 06 18:39:37 aimax kernel: mlx5_core 0000:c4:00.0: MLX5E: StrdRq(1) RqSz(8) StrdSz(2048) RxCqeCmprss(1 basic)
+Sep 06 18:39:37 aimax kernel: mlx5_core 0000:c4:00.0 enp196s0np0: renamed from eth0
+Sep 06 18:39:38 aimax kernel: mlx5_core 0000:c4:00.0 enp196s0np0: Link up
+Sep 06 18:39:38 aimax kernel: mlx5_core 0000:c4:00.0 mlx5_0: Port: 1 Link ACTIVE
+Sep 06 19:21:57 aimax kernel: mlx5_core 0000:c4:00.0: poll_health:803:(pid 1400): Fatal error 1 detected
+Sep 06 19:21:57 aimax kernel: mlx5_core 0000:c4:00.0: print_health_info:432:(pid 1400): PCI slot is unavailable
+Sep 06 19:21:58 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_health_try_recover:340:(pid 20451): handling bad device here
+Sep 06 19:21:58 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_error_sw_reset:236:(pid 20451): start
+Sep 06 19:22:00 aimax kernel: mlx5_core 0000:c4:00.0: NIC IFC still 7 after 2000ms.
+Sep 06 19:22:00 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_error_sw_reset:273:(pid 20451): end
+Sep 06 19:22:00 aimax kernel: mlx5_core 0000:c4:00.0: E-Switch: Disable: mode(LEGACY), nvfs(0), necvfs(0), active vports(0)
+Sep 06 19:22:00 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_wait_for_pages:806:(pid 20451): Skipping wait for vf pages stage
+Sep 06 19:22:00 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_wait_for_pages:806:(pid 20451): Skipping wait for vf pages stage
+Sep 06 19:23:02 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_health_try_recover:343:(pid 20451): health recovery flow aborted, PCI reads still not working
+Sep 06 19:50:29 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_fw_version_query:844:(pid 30557): fw query failed to find boot img component index, err -67
+Sep 06 19:50:30 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_fw_version_query:844:(pid 30557): fw query failed to find boot img component index, err -67
+Sep 06 20:30:01 aimax kernel: mlx5_core 0000:c4:00.0: E-Switch: Unload vfs: mode(LEGACY), nvfs(0), necvfs(0), active vports(0)
+Sep 06 20:30:01 aimax kernel: mlx5_core 0000:c4:00.0: E-Switch: Disable: mode(LEGACY), nvfs(0), necvfs(0), active vports(0)
+Sep 06 20:30:01 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_wait_for_pages:806:(pid 33648): Skipping wait for vf pages stage
+Sep 06 20:30:01 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_wait_for_pages:806:(pid 33648): Skipping wait for vf pages stage
+Sep 06 20:30:01 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_uninit_one:1543:(pid 33648): mlx5_uninit_one: interface is down, NOP
+Sep 06 20:30:01 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_nv_param_read:186:(pid 33648): Failed to read mnvda reg: type_class 0x0, param_idx 0x81, header_len 20, err -67
+Sep 06 20:30:01 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_nv_param_read:186:(pid 33648): Failed to read mnvda reg: type_class 0x0, param_idx 0x81, header_len 20, err -67
+Sep 06 20:30:01 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_nv_param_read:186:(pid 33648): Failed to read mnvda reg: type_class 0x0, param_idx 0x10a, header_len 8, err -67
+Sep 06 20:30:01 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_nv_param_read:186:(pid 33648): Failed to read mnvda reg: type_class 0x0, param_idx 0x11d, header_len 8, err -67
+Sep 06 20:30:01 aimax kernel: mlx5_core 0000:c4:00.0: E-Switch: cleanup
+Sep 06 20:30:04 aimax kernel: pci 0000:c4:00.0: [15b3:1017] type 00 class 0xffffff conventional PCI endpoint
+Sep 06 20:30:04 aimax kernel: pci 0000:c4:00.0: Adding to iommu group 21
+Sep 06 20:30:04 aimax kernel: mlx5_core 0000:c4:00.0: Missing registers BAR, aborting
+Sep 06 20:30:04 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_pci_init:936:(pid 33666): error requesting BARs, aborting
+Sep 06 20:30:04 aimax kernel: mlx5_core 0000:c4:00.0: probe_one:2005:(pid 33666): mlx5_pci_init failed with error code -19
+Sep 06 20:30:12 aimax kernel: mlx5_core 0000:c4:00.0: Missing registers BAR, aborting
+Sep 06 20:30:12 aimax kernel: mlx5_core 0000:c4:00.0: mlx5_pci_init:936:(pid 33691): error requesting BARs, aborting
+Sep 06 20:30:12 aimax kernel: mlx5_core 0000:c4:00.0: probe_one:2005:(pid 33691): mlx5_pci_init failed with error code -19

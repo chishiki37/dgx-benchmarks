@@ -1,0 +1,6 @@
+# after fatal error + failed remove/rescan + driver reload
+c4:00.0 Unassigned class [ffff]: Mellanox Technologies MT27800 Family [ConnectX-5] [15b3:1017] (rev ff)
+
+current_link_speed: 
+current_link_width: 
+netdev present: ABSENT

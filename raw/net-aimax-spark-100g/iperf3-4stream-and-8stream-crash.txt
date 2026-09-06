@@ -1,0 +1,10 @@
+########## 4 STREAMS ##########
+[ 11]   0.00-10.00  sec  4.30 GBytes  3.70 Gbits/sec                  receiver
+[SUM]   0.00-10.00  sec  26.0 GBytes  22.3 Gbits/sec    2             sender
+[SUM]   0.00-10.00  sec  25.9 GBytes  22.3 Gbits/sec                  receiver
+
+########## 8 STREAMS ##########
+[SUM]   8.00-9.00   sec  0.00 Bytes  0.00 Gbits/sec    0             
+[SUM]   9.00-10.00  sec  0.00 Bytes  0.00 Gbits/sec    0             
+
+[exited with code 0]
