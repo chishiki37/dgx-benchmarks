@@ -16,7 +16,7 @@ recover without a power cycle.
 aimax  M.2 slot (root port 00:02.5, Gen4 x4 capable)
    └─ M.2 → OCuLink adapter
        └─ OCuLink cable
-           └─ AOOSTAR AG02 dock
+           └─ AOOSTAR AG01 dock
                └─ ConnectX-5 MCX515A-CCAT   enp196s0np0   192.168.100.1/24
                     │  QSFP28 DAC, negotiated 100 Gb/s
                     ▼
@@ -117,7 +117,7 @@ proof.
 | QSFP cable | **ruled out** | Same. It also carried 22.3 Gb/s with 2 retransmits total — a clean cable. Failure signature is PCIe-side. |
 | M.2 slot | unlikely | Enumerated at full x4 Gen3, stable 42 min; both NVMes (Gen4 x2, other root ports) show zero errors. |
 | OCuLink cable + adapter | possible | But the link trained *optimally* (x4 Gen3 — the chain's ceiling) and never retrained or downgraded. Marginal cabling usually trains down. |
-| AOOSTAR AG02 dock | likely | Slot power delivery under load transient. |
+| AOOSTAR AG01 dock | likely | Slot power delivery under load transient. |
 | ConnectX-5 | **most likely** | Thermal — see below. |
 
 The failure is load-correlated (idle 42 min fine → 1 stream fine → 4 streams fine → 8 streams
@@ -125,7 +125,7 @@ dead in 8 s) and clears only on power removal. That is a *latched* fault, pointi
 quantities that scale with load: heat and current draw.
 
 A ConnectX-5 100G is a datacenter part expecting ~200–300 LFM of forced airflow and
-dissipating ~15–20 W under load. The AG02 is an open eGPU dock built for cards that bring
+dissipating ~15–20 W under load. The AG01 is an open eGPU dock built for cards that bring
 their own fans; the NIC has no directed airflow. Against this: mlx5 logged **no** temperature
 warning before the fault, which weakens the thermal case — though the register path may
 already have been dead by then.
@@ -136,7 +136,7 @@ already have been dead by then.
    airflow and dies without → thermal, conclusive and nearly free.
 2. **Instrument temperature.** `mstflint` → `mget_temp_ext -d 0000:c4:00.0` sampled during
    load. Must be installed *before* the next stress run.
-3. **Swap the card in the dock.** Another PCIe card dying under load in the same AG02
+3. **Swap the card in the dock.** Another PCIe card dying under load in the same AG01
    implicates dock/cable/adapter; surviving implicates the NIC.
 4. **Swap the NIC into a real slot** on another host. Definitive but highest effort.
 5. Enable jumbo (MTU 9000) on both ends once stable, and re-measure.

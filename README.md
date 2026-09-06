@@ -22,7 +22,7 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 
 9. **[DeepSeek V4 Flash Vision-Exp first run](09-dsv4-vision-exp-first-run.md)** — Official Vision-Exp checkpoint (published 08-31) on the updated MiaAI-Lab recipe, 2× DGX Spark, 1M ctx. Decode tax: 38.0 tok/s single (−33% vs 0731-ablit k=3), bench-window spec acceptance 27.8% (heavier n_predict=3 draft head + prose workload). Quality at ceiling: GSM8K 98% (one extraction artifact), HumanEval 96% — fixes the long-standing HumanEval/32 checkpoint bug. Capability add: native image_url vision + budgeted reasoning.
 
-10. **[aimax ↔ Spark 100G over OCuLink](10-aimax-spark-100g-oculink-link.md)** — New lane: x86 workstation (Ryzen AI MAX+ 395) to `edgexpert-9105` via ConnectX-5 in an AOOSTAR AG02 OCuLink dock. Link negotiates 100GbE but delivers **22.3 Gb/s** — the ceiling is PCIe 3.0 x4 (31.5 Gb/s raw), imposed by the M.2→OCuLink path, not the wire. Run ended when the NIC took a fatal error under 8-stream load and dropped off the bus (`rev ff`, BARs gone, recoverable only by power cycle). Includes component elimination — QSFP cable and Spark ruled out, thermal/dock-power the leading suspects — and the AER-disabled caveat that limits what the logs can prove.
+10. **[aimax ↔ Spark 100G over OCuLink](10-aimax-spark-100g-oculink-link.md)** — New lane: x86 workstation (Ryzen AI MAX+ 395) to `edgexpert-9105` via ConnectX-5 in an AOOSTAR AG01 OCuLink dock. Link negotiates 100GbE but delivers **22.3 Gb/s** — the ceiling is PCIe 3.0 x4 (31.5 Gb/s raw), imposed by the M.2→OCuLink path, not the wire. Run ended when the NIC took a fatal error under 8-stream load and dropped off the bus (`rev ff`, BARs gone, recoverable only by power cycle). Includes component elimination — QSFP cable and Spark ruled out, thermal/dock-power the leading suspects — and the AER-disabled caveat that limits what the logs can prove.
 
 ## Plans
 
@@ -53,7 +53,7 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 ## Hardware
 - NVIDIA DGX Spark (GB10, 128 GB unified memory)
 - 2-node TP=2 deployments: MSI EdgeXpert 9105 + bdea, 200G RoCEv2, MTU 9000
-- Report 10 lane: aimax (AMD Ryzen AI MAX+ 395) ↔ EdgeXpert 9105, ConnectX-5 100GbE over M.2→OCuLink→AOOSTAR AG02, PCIe 3.0 x4, MTU 1500
+- Report 10 lane: aimax (AMD Ryzen AI MAX+ 395) ↔ EdgeXpert 9105, ConnectX-5 100GbE over M.2→OCuLink→AOOSTAR AG01, PCIe 3.0 x4, MTU 1500
 - llama.cpp: CUDA 13.0, sm_121
 - SGLang: FlashInfer SM120 backend, muse-glimmer branch (PR #34262)
 - vLLM: 0.21.1rc1 (ablit, Nemotron) / 0.25.2.dev0 (SuperDeepSeek-MQ, DSpark k=3)

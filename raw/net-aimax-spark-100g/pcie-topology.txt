@@ -1,4 +1,4 @@
-# PCIe path: M.2 -> OCuLink adapter -> OCuLink cable -> AOOSTAR AG02 dock -> ConnectX-5
+# PCIe path: M.2 -> OCuLink adapter -> OCuLink cable -> AOOSTAR AG01 dock -> ConnectX-5
 # captured 2026-09-06T20:41:31+07:00 on aimax (AMD Ryzen AI MAX+ 395, Strix Halo)
 
 ## kernel link-budget line at enumeration (boot 18:39:34)

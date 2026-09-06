@@ -8,7 +8,7 @@ aimax (AMD Ryzen AI MAX+ 395, Strix Halo)
   MAC        0c:42:a1:22:de:3e
   addr       192.168.100.1/24
   path       M.2 slot (root port 00:02.5) -> M.2/OCuLink adapter -> OCuLink cable
-             -> AOOSTAR AG02 dock -> ConnectX-5
+             -> AOOSTAR AG01 dock -> ConnectX-5
 
 edgexpert-9105 (DGX Spark, GB10)
   netdev     enp1s0f1np1

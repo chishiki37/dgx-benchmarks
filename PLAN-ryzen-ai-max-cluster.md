@@ -229,14 +229,16 @@ existing eight nodes.
 
 # Open questions
 
-1. **AG01 or AG02?** This document says AG01 per the latest description;
-   [report 10](10-aimax-spark-100g-oculink-link.md) says AG02. One is wrong and should be
+1. **AG01 or AG01?** This document says AG01 per the latest description;
+   [report 10](10-aimax-spark-100g-oculink-link.md) says AG01. One is wrong and should be
    corrected.
-2. **What is the CRS812's role?** Reports 04 and 09 describe *direct* CX-7 attachment for
-   the RoCE lanes, which suggests the switch may carry management/10GbE rather than the
-   RDMA fabric. Phase 4 depends on this: if Ryzen nodes must reach RoCE through the
-   switch, it needs **PFC/ECN support for lossless RoCEv2**, which is not a given on
-   MikroTik hardware. Resilient RoCE / DCQCN may be required instead.
+2. **CRS812 lossless-RoCE capability.** Confirmed: the CRS812 is the QSFP switch
+   connecting all 8 Sparks — it *is* the RoCE fabric, not management. Phase 4 therefore
+   depends on how it handles lossless RoCEv2 for added Ryzen nodes: whether PFC/ECN is
+   configured today, and whether the Sparks currently rely on it or on Resilient RoCE /
+   DCQCN instead. Check the existing switch config before assuming a Ryzen node can just
+   be plugged in. Also confirm a free QSFP28 port and that it will negotiate 100G to a
+   host NIC rather than only Spark-to-Spark rates.
 3. **Capacity or speed?** Determines TP vs PP, and therefore whether 50 Gb/s is the right
    target at all (gap #2).
 4. **What is the per-node cost** of Ryzen + dock + adapter + cable + NIC versus one more
