@@ -1,9 +1,11 @@
 # PLAN — Distributed inference on Ryzen AI MAX+ 395 (Strix Halo)
 
-Status: **Phase 1 (single-link PoC) complete; lane fault resolved.** Written 2026-09-06,
-updated 2026-09-06 after the post-reboot gates — see [report 11](11-oculink-lane-resolved.md).
-The CX-5's fatal PCIe drop was **ASPM** and is fixed; the lane now runs **28.0 Gb/s at
-1.34 µs RDMA latency**, and **TP is confirmed viable**.
+Status: **Phase 1 complete; node 2 on the CX-5 P2P.** Written 2026-09-06, updated 2026-09-27
+after [report 12](12-aimax-aimax2-100g-direct.md). The Spark-lane CX-5 drop was **ASPM** and
+is fixed ([report 11](11-oculink-lane-resolved.md): **28.0 Gb/s at 1.34 µs RDMA**). The
+current 192.168.100.0/24 pair is **aimax ↔ aimax-2**, both TOPC 395, same Gen3 ×4 CX-5
+path, **28.0 Gb/s TCP** aimax→aimax-2. Reverse and RDMA on that pair are still open. `.2`
+is no longer Spark.
 
 ## Objective
 
