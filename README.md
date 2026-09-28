@@ -27,6 +27,8 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 
 12. **[aimax ↔ aimax-2 100G direct](12-aimax-aimax2-100g-direct.md)** — Node 2 is up: two TOPC Ryzen AI MAX+ 395 hosts, each M.2→TKM8→OCuLink→AG01 or DEG1 (dock↔host unrecorded)→CX-5 MCX515A-CCAT, QSFP P2P. Both `enp196s0np0` at `0000:c4:00.0`, `192.168.100.1/.2`, MTU 9000. Link is 100GbE on **PCIe 3.0 ×4**. iperf3 4-stream 20 s aimax→aimax-2: **28.0 Gb/s** (65.1 GB) — same Gen3 ×4 ceiling as report 11, not a 100 GbE miss. Reverse and RDMA on this pair not recorded. `.2` is no longer Spark.
 
+13. **[First TP2: DeepSeek V4.1 Flash Q2](13-aimax-tp2-ds41-flash.md)** — ds4 ROCm TP on the report-12 pair (`ds4.1f-rocm10.0`, antirez Q2). TCP and RoCE both serve greedy hello. Full PoC BOM (2× TOPC, 2× MCX515A-CCAT, AG01 + DEG1, TR2 S 550W, NADDOD 2 m DAC; E810-CQDA1 inbound). Blockers that were real: aimax-2 `render` group, 61 GiB GTT, 8 MiB memlock, reboot-volatile RoCE GID. A 512-tok C1 probe then took **aimax-2 offline** at token 508 (peer vanish / NO-CARRIER — not ASPM on aimax). No tok/s pin. DSpark unsupported in this TP mode.
+
 ## Plans
 
 - **[Ryzen AI MAX+ 395 cluster plan](PLAN-ryzen-ai-max-cluster.md)** — Standing up a distributed-inference cluster on Strix Halo nodes as a parallel track to the Spark fleet. Phase 1 (single-link PoC) complete at 22.3 Gb/s; covers the PCIe x4 arithmetic that makes a Gen4 NIC mandatory for the 50 Gb/s target, and the gaps — RDMA vs TCP metrics, TP vs PP strategy, RCCL/ROCm maturity, USB4 as an unexplored second interconnect.
@@ -57,11 +59,11 @@ Benchmark and optimization reports for Muse-Glimmer-30B, Qwen3.6, Nemotron-3.5-L
 - NVIDIA DGX Spark (GB10, 128 GB unified memory)
 - 2-node TP=2 deployments: MSI EdgeXpert 9105 + bdea, 200G RoCEv2, MTU 9000
 - Report 10–11 lane: aimax (AMD Ryzen AI MAX+ 395) ↔ EdgeXpert 9105, ConnectX-5 100GbE over M.2→OCuLink→AOOSTAR AG01, PCIe 3.0 x4 (MTU 1500 then 9000)
-- Report 12 lane: aimax ↔ aimax-2 (both Ryzen AI MAX+ 395), each CX-5 in AG01 or DEG1 via TKM8/OCuLink, 192.168.100.1/.2, PCIe 3.0 x4, MTU 9000, 28.0 Gb/s TCP
+- Report 12–13 lane: aimax ↔ aimax-2, two TOPC 395, CX-5 in AG01 + DEG1 (assignment unrecorded), TKM8/OCuLink, NADDOD QSFP28 2 m DAC, Thermaltake TR2 S 550W on one dock. 192.168.100.1/.2, PCIe 3.0 ×4, MTU 9000, 28.0 Gb/s TCP. ds4 TP2 V4.1 Flash Q2 (TCP + RoCE). E810-CQDA1 ×2 not installed yet.
 - llama.cpp: CUDA 13.0, sm_121
 - SGLang: FlashInfer SM120 backend, muse-glimmer branch (PR #34262)
 - vLLM: 0.21.1rc1 (ablit, Nemotron) / 0.25.2.dev0 (SuperDeepSeek-MQ, DSpark k=3)
 - Image: ghcr.io/anemll/dspark-vllm-gx10:0.1.1, flashinfer_b12x MoE, DSpark speculative decoding
 
 ## Date
-August 10–September 27, 2026
+August 10–September 28, 2026

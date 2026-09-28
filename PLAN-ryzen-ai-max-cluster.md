@@ -1,11 +1,10 @@
 # PLAN — Distributed inference on Ryzen AI MAX+ 395 (Strix Halo)
 
-Status: **Phase 1 complete; node 2 on the CX-5 P2P.** Written 2026-09-06, updated 2026-09-27
-after [report 12](12-aimax-aimax2-100g-direct.md). The Spark-lane CX-5 drop was **ASPM** and
-is fixed ([report 11](11-oculink-lane-resolved.md): **28.0 Gb/s at 1.34 µs RDMA**). The
-current 192.168.100.0/24 pair is **aimax ↔ aimax-2**, both TOPC 395, same Gen3 ×4 CX-5
-path, **28.0 Gb/s TCP** aimax→aimax-2. Reverse and RDMA on that pair are still open. `.2`
-is no longer Spark.
+Status: **Phase 1 complete; first TP2 served.** Written 2026-09-06, updated 2026-09-28
+after [report 13](13-aimax-tp2-ds41-flash.md). Pair is **aimax ↔ aimax-2** CX-5 P2P
+(**28.0 Gb/s TCP**, report 12). ds4 ROCm TP2 (V4.1 Flash Q2) answers on TCP and RoCE;
+a 512-tok C1 probe crashed aimax-2 (peer vanish, not ASPM on aimax). E810-CQDA1 ×2
+inbound for the Gen4/~50 Gb/s play. `.2` is no longer Spark.
 
 ## Objective
 
